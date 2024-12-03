@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Email: nicholas (dot) konz (at) duke (dot) edu</p>
-    <p>Bluesky: @nickkonz.bsky.social</p>
+    <p>Bluesky 🦋: @nickkonz.bsky.social</p>
 
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
