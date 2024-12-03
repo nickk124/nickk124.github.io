@@ -22,7 +22,7 @@
   year={2024},
   arxiv={2408.08381},
   selected={true},
-  abbr={NeurIPS Workshop},
+  abbr={NeurIPS-W},
   bibtex_show = true,
   abstract={In recent years, there has been interest in how geometric properties such as intrinsic dimension (ID) of a neural network's hidden representations change through its layers, and how such properties are predictive of important model behavior such as generalization ability. However, evidence has begun to emerge that such behavior can change significantly depending on the domain of the network's training data, such as natural versus medical images. Here, we further this inquiry by exploring how the ID of a network's learned representations changes through its layers, in essence, characterizing how the network successively refines the information content of input data to be used for predictions. Analyzing eleven natural and medical image datasets across six network architectures, we find that how ID changes through the network differs noticeably between natural and medical image models. Specifically, medical image models peak in representation ID earlier in the network, implying a difference in the image features and their abstractness that are typically used for downstream tasks in these domains. Additionally, we discover a strong correlation of this peak representation ID with the ID of the data in its input space, implying that the intrinsic information content of a model's learned representations is guided by that of the data it was trained on. Overall, our findings emphasize notable discrepancies in network behavior between natural and non-natural imaging domains regarding hidden representation information content, and provide further insights into how a network's learned features are shaped by its training data.}
 }
@@ -62,7 +62,7 @@
   arxiv={2402.09604},
   selected={true},
   bibtex_show = true,
-  abbr={CVPR Workshop (Oral)},
+  abbr={CVPR-W (Oral)},
   abstract={Test-time adaptation (TTA) refers to adapting a trained model to a new domain during testing. Existing TTA techniques rely on having multiple test images from the same domain, yet this may be impractical in real-world applications such as medical imaging, where data acquisition is expensive and imaging conditions vary frequently. Here, we approach such a task, of adapting a medical image segmentation model with only a single unlabeled test image. Most TTA approaches, which directly minimize the entropy of predictions, fail to improve performance significantly in this setting, in which we also observe the choice of batch normalization (BN) layer statistics to be a highly important yet unstable factor due to only having a single test domain example. To overcome this, we propose to instead integrate over predictions made with various estimates of target domain statistics between the training and test statistics, weighted based on their entropy statistics. Our method, validated on 24 source/target domain splits across 3 medical image datasets surpasses the leading method by 2.9% Dice coefficient on average.}
 }
 
@@ -102,7 +102,7 @@
   arxiv={2310.03149},
   bibtex_show = true,
   selected={true},
-  abbr={NeurIPS Workshop (Oral)},
+  abbr={NeurIPS-W (Oral)},
   poster={attrib_conceptattribution_poster.pdf},
   abstract={By now there is substantial evidence that deep learning models learn certain human-interpretable features as part of their internal representations of data. As having the right (or wrong) concepts is critical to trustworthy machine learning systems, it is natural to ask which inputs from the model's original training set were most important for learning a concept at a given layer. To answer this, we combine data attribution methods with methods for probing the concepts learned by a model. Training network and probe ensembles for two concept datasets on a range of network layers, we use the recently developed TRAK method for large-scale data attribution. We find some evidence for convergence, where removing the 10,000 top attributing images for a concept and retraining the model does not change the location of the concept in the network nor the probing sparsity of the concept. This suggests that rather than being highly dependent on a few specific examples, the features that inform the development of a concept are spread in a more diffuse manner across its exemplars, implying robustness in concept formation.}
 }
