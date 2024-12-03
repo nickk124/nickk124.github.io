@@ -37,7 +37,8 @@
   selected={true},
   abbr={MICCAI},
   bibtex_show = true,
-  poster={segdiff_MICCAI24.pdf}
+  poster={segdiff_MICCAI24.pdf},
+  abstract={Diffusion models have enabled remarkably high-quality medical image generation, yet it is challenging to enforce anatomical constraints in generated images. To this end, we propose a diffusion model-based method that supports anatomically-controllable medical image generation, by following a multi-class anatomical segmentation mask at each sampling step. We additionally introduce a random mask ablation training algorithm to enable conditioning on a selected combination of anatomical constraints while allowing flexibility in other anatomical areas. We compare our method ("SegGuidedDiff") to existing methods on breast MRI and abdominal/neck-to-pelvis CT datasets with a wide range of anatomical objects. Results show that our method reaches a new state-of-the-art in the faithfulness of generated images to input anatomical masks on both datasets, and is on par for general anatomical realism. Finally, our model also enjoys the extra benefit of being able to adjust the anatomical similarity of generated images to real images of choice through interpolation in its latent space. SegGuidedDiff has many applications, including cross-modality translation, and the generation of paired or counterfactual data. Our code is available at https://github.com/mazurowski-lab/segmentation-guided-diffusion.}
 }
 
 @inproceedings{konz2023effect,
@@ -49,7 +50,8 @@
   selected={true},
   abbr={ICLR},
   bibtex_show = true,
-  poster={intrinsicproperties_iclr2024.pdf}
+  poster={intrinsicproperties_iclr2024.pdf},
+  abstract={This paper investigates discrepancies in how neural networks learn from different imaging domains, which are commonly overlooked when adopting computer vision techniques from the domain of natural images to other specialized domains such as medical images. Recent works have found that the generalization error of a trained network typically increases with the intrinsic dimension (d_data) of its training set. Yet, the steepness of this relationship varies significantly between medical (radiological) and natural imaging domains, with no existing theoretical explanation. We address this gap in knowledge by establishing and empirically validating a generalization scaling law with respect to d_data, and propose that the substantial scaling discrepancy between the two considered domains may be at least partially attributed to the higher intrinsic ``label sharpness'' (K_F) of medical imaging datasets, a metric which we propose. Next, we demonstrate an additional benefit of measuring the label sharpness of a training set: it is negatively correlated with the trained model's adversarial robustness, which notably leads to models for medical images having a substantially higher vulnerability to adversarial attack. Finally, we extend our d_data formalism to the related metric of learned representation intrinsic dimension (d_repr), derive a generalization scaling law with respect to d_repr, and show that d_data serves as an upper bound for d_repr. Our theoretical results are supported by thorough experiments with six models and eleven natural and medical imaging datasets over a range of training set sizes. Our findings offer insights into the influence of intrinsic dataset properties on generalization, representation learning, and robustness in deep neural networks. Code link: https://github.com/mazurowski-lab/intrinsic-properties}
 }
 
 @inproceedings{dong2024intent,
