@@ -1,29 +1,25 @@
 ---
 layout: about
-title: About
+title: about
 permalink: /
-subtitle:
+subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
-  image: nick_kyoto_lowres.jpg
+  image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Email: nicholas (dot) konz (at) duke (dot) edu</p>
-    <p>Bluesky 🦋: @nickkonz.bsky.social</p>
+    <p>555 your office number</p>
+    <p>123 your address street</p>
+    <p>Your City, State 12345</p>
 
-news: false  # includes a list of news items
-latest_posts: false  # includes a list of the newest posts
+news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: true # includes social icons at the bottom of the page
 ---
 
-I'm a Ph.D. candidate studying machine learning at Duke University under [Maciej Mazurowski](https://sites.duke.edu/mazurowski/). My current research is in deep learning for medical image analysis, in topics like domain adaptation, image-to-image translation, and image generation. Broadly, I'm interested in how foundational machine learning concepts, such as [generalization, intrinsic geometric dataset properties](https://arxiv.org/abs/2401.08865), and [image distribution distance metrics](https://arxiv.org/abs/2412.01496) behave differently or should be adapted in the context of medical image analysis (or other non-traditional computer vision domains).
+Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-Additionally, I'm drawn to the intersection of ML and science: understanding deep learning from a scientific perspective, and the use of DL for scientific modeling & discovery and science-adjacent fields.
+Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
-I have also worked as a research intern in the Math, Stats, and Data Science Group at [PNNL](https://www.pnnl.gov/). My undergrad was at UNC in physics and math, with research in statistical techniques for astronomy.
-
-See my [Google Scholar page](https://scholar.google.com/citations?hl=en&user=a9rXidMAAAAJ&view_op=list_works&sortby=pubdate) for a full list of my publications, with select papers highlighted in the section below.
-
-On my free time I like to practice jiu-jitsu and yoga, cook, listen to and play music, and read.
+Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
