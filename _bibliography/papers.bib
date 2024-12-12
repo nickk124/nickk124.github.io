@@ -16,10 +16,23 @@
       code={https://github.com/mazurowski-lab/RaD},
       abstract={Determining whether two sets of images belong to the same or different domain is a crucial task in modern medical image analysis and deep learning, where domain shift is a common problem that commonly results in decreased model performance. This determination is also important to evaluate the output quality of generative models, e.g., image-to-image translation models used to mitigate domain shift. Current metrics for this either rely on the (potentially biased) choice of some downstream task such as segmentation, or adopt task-independent perceptual metrics (e.g., FID) from natural imaging which insufficiently capture anatomical consistency and realism in medical images. We introduce a new perceptual metric tailored for medical images: Radiomic Feature Distance (RaD), which utilizes standardized, clinically meaningful and interpretable image features. We show that RaD is superior to other metrics for out-of-domain (OOD) detection in a variety of experiments. Furthermore, RaD outperforms previous perceptual metrics (FID, KID, etc.) for image-to-image translation by correlating more strongly with downstream task performance as well as anatomical consistency and realism, and shows similar utility for evaluating unconditional image generation. RaD also offers additional benefits such as interpretability, as well as stability and computational efficiency at low sample sizes. Our results are supported by broad experiments spanning four multi-domain medical image datasets, nine downstream tasks, six image translation models, and other factors, highlighting the broad potential of RaD for medical image analysis.}
 }
+@article{zhang2024quantifying,
+  title={Quantifying the Limits of Segment Anything Model: Analyzing Challenges in Segmenting Tree-Like and Low-Contrast Structures},
+  author={Zhang, Yixin* and Konz, Nicholas* and Kramer, Kevin and Mazurowski, Maciej A.},
+  journal={arXiv preprint arXiv:2412.04243},
+  year={2024},
+  booktitle={arXiv},
+  arxiv={2412.04243},
+  selected={true},
+  abbr={arXiv},
+  bibtex_show = true,
+  code={https://github.com/mazurowski-lab/SAM-TexturalConfusion-Metrics},
+  abstract={Segment Anything Model (SAM) has shown impressive performance in interactive and zero-shot segmentation across diverse domains, suggesting that they have learned a general concept of "objects" from their large-scale training. However, we observed that SAM struggles with certain types of objects, particularly those featuring dense, tree-like structures and low textural contrast from their surroundings. These failure modes are critical for understanding its limitations in real-world use. In order to systematically examine this issue, we propose metrics to quantify two key object characteristics: tree-likeness and textural separability. Through extensive controlled synthetic experiments and testing on real datasets, we demonstrate that SAM's performance is noticeably correlated with these factors. We link these behaviors under the concept of "textural confusion", where SAM misinterprets local structure as global texture, leading to over-segmentation, or struggles to differentiate objects from similarly textured backgrounds. These findings offer the first quantitative framework to model SAM's challenges, providing valuable insights into its limitations and guiding future improvements for vision foundation models.}
+}
 
 @inproceedings{konz2024pre,
   title={Pre-processing and Compression: Understanding Hidden Representation Refinement Across Imaging Domains via Intrinsic Dimension},
-  author={Konz, Nicholas and Mazurowski, Maciej A},
+  author={Konz, Nicholas and Mazurowski, Maciej A.},
   booktitle={NeurIPS (Advances in Neural Information Processing Systems): Workshop on Scientific Methods for Understanding Deep Learning},
   year={2024},
   arxiv={2408.08381},
@@ -32,7 +45,7 @@
 
 @inproceedings{konz2024anatomically,
   title={Anatomically-Controllable Medical Image Generation with Segmentation-Guided Diffusion Models},
-  author={Konz, Nicholas and Chen, Yuwen and Dong, Haoyu and Mazurowski, Maciej A},
+  author={Konz, Nicholas and Chen, Yuwen and Dong, Haoyu and Mazurowski, Maciej A.},
   booktitle={MICCAI (International Conference on Medical Image Computing and Computer-Assisted Intervention)},
   year={2024},
   organization={Springer},
@@ -47,7 +60,7 @@
 
 @inproceedings{konz2023effect,
   title={The Effect of Intrinsic Dataset Properties on Generalization: Unraveling Learning Differences Between Natural and Medical Images},
-  author={Konz, Nicholas and Mazurowski, Maciej A},
+  author={Konz, Nicholas and Mazurowski, Maciej A.},
   booktitle={ICLR (The Twelfth International Conference on Learning Representations)},
   year={2024},
   arxiv={2401.08865},
@@ -61,7 +74,7 @@
 
 @inproceedings{dong2024intent,
   title={Medical Image Segmentation with InTEnt: Integrated Entropy Weighting for Single Image Test-Time Adaptation},
-  author={Dong, Haoyu and Konz, Nicholas and Gu, Hanxue and Mazurowski, Maciej A},
+  author={Dong, Haoyu and Konz, Nicholas and Gu, Hanxue and Mazurowski, Maciej A.},
   booktitle={CVPR (Conference on Computer Vision and Pattern Recognition): Workshop on Domain adaptation, Explainability, Fairness in AI for Medical Image Analysis (Oral)},
   year={2024},
   arxiv={2402.09604},
@@ -74,7 +87,7 @@
 
 @inproceedings{konz2024rethinking,
   title={Rethinking Perceptual Metrics for Medical Image Translation},
-  author={Nicholas Konz and Yuwen Chen and Hanxue Gu and Haoyu Dong and Maciej A Mazurowski},
+  author={Nicholas Konz and Yuwen Chen and Hanxue Gu and Haoyu Dong and Maciej A. Mazurowski},
   booktitle={MIDL (Medical Imaging with Deep Learning)},
   year={2024},
   arxiv={2404.07318},
@@ -87,7 +100,7 @@
 
 @article{konz2023picard,
   title={Unsupervised anomaly localization in high-resolution breast scans using deep pluralistic image completion},
-  author={Konz, Nicholas and Dong, Haoyu and Mazurowski, Maciej A},
+  author={Konz, Nicholas and Dong, Haoyu and Mazurowski, Maciej A.},
   journal={Medical Image Analysis},
   volume={87},
   pages={102836},
@@ -128,7 +141,7 @@
 
 @article{mazurowski2023segment,
   title={Segment anything model for medical image analysis: an experimental study},
-  author={Mazurowski, Maciej A and Dong, Haoyu and Gu, Hanxue and Yang, Jichen and Konz, Nicholas and Zhang, Yixin},
+  author={Mazurowski, Maciej A. and Dong, Haoyu and Gu, Hanxue and Yang, Jichen and Konz, Nicholas and Zhang, Yixin},
   journal={Medical Image Analysis},
   volume={89},
   pages={102918},
@@ -144,7 +157,7 @@
 
 @inproceedings{konz2024reverse,
   title={Reverse engineering breast mris: Predicting acquisition parameters directly from images},
-  author={Konz, Nicholas and Mazurowski, Maciej A},
+  author={Konz, Nicholas and Mazurowski, Maciej A.},
   booktitle={MIDL (Medical Imaging with Deep Learning)},
   year={2023},
   organization={PMLR},
@@ -176,7 +189,7 @@
 
 @article{dong2023swssl,
   title={SWSSL: Sliding window-based self-supervised learning for anomaly detection in high-resolution images},
-  author={Dong, Haoyu and Zhang, Yifan and Gu, Hanxue and Konz, Nicholas and Zhang, Yixin and Mazurowski, Maciej A},
+  author={Dong, Haoyu and Zhang, Yifan and Gu, Hanxue and Konz, Nicholas and Zhang, Yixin and Mazurowski, Maciej A.},
   journal={IEEE Transactions on Medical Imaging},
   year={2023},
   publisher={IEEE},
@@ -190,7 +203,7 @@
 
 @inproceedings{konz2022intrinsic,
   title={The Intrinsic Manifolds of Radiological Images and their Role in Deep Learning},
-  author={Konz, Nicholas and Gu, Hanxue and Dong, Haoyu and Mazurowski, Maciej A},
+  author={Konz, Nicholas and Gu, Hanxue and Dong, Haoyu and Mazurowski, Maciej A.},
   booktitle={MICCAI (International Conference on Medical Image Computing and Computer-Assisted Intervention)},
   pages={684--694},
   year={2022},
