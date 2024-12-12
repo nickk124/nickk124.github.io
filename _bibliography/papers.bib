@@ -1,31 +1,31 @@
 ---
 ---
 @article{konz2024radmetricmedicalimage,
-      title={RaD: A Metric for Medical Image Distribution Comparison in Out-of-Domain Detection and Other Applications}, 
-      author={Nicholas Konz and Yuwen Chen and Hanxue Gu and Haoyu Dong and Yaqian Chen and Maciej A. Mazurowski},
-      booktitle={**arXiv**},
-      year={2024},
-      eprint={2412.01496},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2412.01496}, 
-      arxiv={2412.01496},
-      selected={true},
-      abbr={arXiv},
-      bibtex_show = true,
-      code={https://github.com/mazurowski-lab/RaD},
-      abstract={Determining whether two sets of images belong to the same or different domain is a crucial task in modern medical image analysis and deep learning, where domain shift is a common problem that commonly results in decreased model performance. This determination is also important to evaluate the output quality of generative models, e.g., image-to-image translation models used to mitigate domain shift. Current metrics for this either rely on the (potentially biased) choice of some downstream task such as segmentation, or adopt task-independent perceptual metrics (e.g., FID) from natural imaging which insufficiently capture anatomical consistency and realism in medical images. We introduce a new perceptual metric tailored for medical images: Radiomic Feature Distance (RaD), which utilizes standardized, clinically meaningful and interpretable image features. We show that RaD is superior to other metrics for out-of-domain (OOD) detection in a variety of experiments. Furthermore, RaD outperforms previous perceptual metrics (FID, KID, etc.) for image-to-image translation by correlating more strongly with downstream task performance as well as anatomical consistency and realism, and shows similar utility for evaluating unconditional image generation. RaD also offers additional benefits such as interpretability, as well as stability and computational efficiency at low sample sizes. Our results are supported by broad experiments spanning four multi-domain medical image datasets, nine downstream tasks, six image translation models, and other factors, highlighting the broad potential of RaD for medical image analysis.}
+  title={RaD: A Metric for Medical Image Distribution Comparison in Out-of-Domain Detection and Other Applications}, 
+  author={Nicholas Konz and Yuwen Chen and Hanxue Gu and Haoyu Dong and Yaqian Chen and Maciej A. Mazurowski},
+  booktitle={**arXiv**},
+  year={2024},
+  eprint={2412.01496},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2412.01496}, 
+  arxiv={2412.01496},
+  selected={true},
+  bibtex_show = true,
+  code={https://github.com/mazurowski-lab/RaD},
+  preview={rad.png},
+  abstract={Determining whether two sets of images belong to the same or different domain is a crucial task in modern medical image analysis and deep learning, where domain shift is a common problem that commonly results in decreased model performance. This determination is also important to evaluate the output quality of generative models, e.g., image-to-image translation models used to mitigate domain shift. Current metrics for this either rely on the (potentially biased) choice of some downstream task such as segmentation, or adopt task-independent perceptual metrics (e.g., FID) from natural imaging which insufficiently capture anatomical consistency and realism in medical images. We introduce a new perceptual metric tailored for medical images: Radiomic Feature Distance (RaD), which utilizes standardized, clinically meaningful and interpretable image features. We show that RaD is superior to other metrics for out-of-domain (OOD) detection in a variety of experiments. Furthermore, RaD outperforms previous perceptual metrics (FID, KID, etc.) for image-to-image translation by correlating more strongly with downstream task performance as well as anatomical consistency and realism, and shows similar utility for evaluating unconditional image generation. RaD also offers additional benefits such as interpretability, as well as stability and computational efficiency at low sample sizes. Our results are supported by broad experiments spanning four multi-domain medical image datasets, nine downstream tasks, six image translation models, and other factors, highlighting the broad potential of RaD for medical image analysis.}
 }
 @article{zhang2024quantifying,
   title={Quantifying the Limits of Segment Anything Model: Analyzing Challenges in Segmenting Tree-Like and Low-Contrast Structures},
-  author={Zhang, Yixin* and Konz, Nicholas* and Kramer, Kevin and Mazurowski, Maciej A.},
+  author={Zhang*, Yixin and Konz*, Nicholas and Kramer, Kevin and Mazurowski, Maciej A.},
   journal={arXiv preprint arXiv:2412.04243},
   year={2024},
   booktitle={arXiv},
   arxiv={2412.04243},
   selected={true},
-  abbr={arXiv},
   bibtex_show = true,
+  preview={samfailure.png},
   code={https://github.com/mazurowski-lab/SAM-TexturalConfusion-Metrics},
   abstract={Segment Anything Model (SAM) has shown impressive performance in interactive and zero-shot segmentation across diverse domains, suggesting that they have learned a general concept of "objects" from their large-scale training. However, we observed that SAM struggles with certain types of objects, particularly those featuring dense, tree-like structures and low textural contrast from their surroundings. These failure modes are critical for understanding its limitations in real-world use. In order to systematically examine this issue, we propose metrics to quantify two key object characteristics: tree-likeness and textural separability. Through extensive controlled synthetic experiments and testing on real datasets, we demonstrate that SAM's performance is noticeably correlated with these factors. We link these behaviors under the concept of "textural confusion", where SAM misinterprets local structure as global texture, leading to over-segmentation, or struggles to differentiate objects from similarly textured backgrounds. These findings offer the first quantitative framework to model SAM's challenges, providing valuable insights into its limitations and guiding future improvements for vision foundation models.}
 }
@@ -33,12 +33,12 @@
 @inproceedings{konz2024pre,
   title={Pre-processing and Compression: Understanding Hidden Representation Refinement Across Imaging Domains via Intrinsic Dimension},
   author={Konz, Nicholas and Mazurowski, Maciej A.},
-  booktitle={**NeurIPS (Advances in Neural Information Processing Systems): Workshop on Scientific Methods for Understanding Deep Learning**},
+  booktitle={NeurIPS (Advances in Neural Information Processing Systems): Workshop on Scientific Methods for Understanding Deep Learning},
   year={2024},
   arxiv={2408.08381},
   selected={true},
-  abbr={NeurIPS-W},
   bibtex_show = true,
+  preview={sciforDL24.png},
   code={https://github.com/mazurowski-lab/intrinsic-properties},
   abstract={In recent years, there has been interest in how geometric properties such as intrinsic dimension (ID) of a neural network's hidden representations change through its layers, and how such properties are predictive of important model behavior such as generalization ability. However, evidence has begun to emerge that such behavior can change significantly depending on the domain of the network's training data, such as natural versus medical images. Here, we further this inquiry by exploring how the ID of a network's learned representations changes through its layers, in essence, characterizing how the network successively refines the information content of input data to be used for predictions. Analyzing eleven natural and medical image datasets across six network architectures, we find that how ID changes through the network differs noticeably between natural and medical image models. Specifically, medical image models peak in representation ID earlier in the network, implying a difference in the image features and their abstractness that are typically used for downstream tasks in these domains. Additionally, we discover a strong correlation of this peak representation ID with the ID of the data in its input space, implying that the intrinsic information content of a model's learned representations is guided by that of the data it was trained on. Overall, our findings emphasize notable discrepancies in network behavior between natural and non-natural imaging domains regarding hidden representation information content, and provide further insights into how a network's learned features are shaped by its training data.}
 }
@@ -51,23 +51,23 @@
   organization={Springer},
   arxiv={2402.05210},
   selected={true},
-  abbr={MICCAI},
   bibtex_show = true,
   poster={segdiff_MICCAI24.pdf},
+  preview={segdiff.png},
   code={https://github.com/mazurowski-lab/segmentation-guided-diffusion},
   abstract={Diffusion models have enabled remarkably high-quality medical image generation, yet it is challenging to enforce anatomical constraints in generated images. To this end, we propose a diffusion model-based method that supports anatomically-controllable medical image generation, by following a multi-class anatomical segmentation mask at each sampling step. We additionally introduce a random mask ablation training algorithm to enable conditioning on a selected combination of anatomical constraints while allowing flexibility in other anatomical areas. We compare our method ("SegGuidedDiff") to existing methods on breast MRI and abdominal/neck-to-pelvis CT datasets with a wide range of anatomical objects. Results show that our method reaches a new state-of-the-art in the faithfulness of generated images to input anatomical masks on both datasets, and is on par for general anatomical realism. Finally, our model also enjoys the extra benefit of being able to adjust the anatomical similarity of generated images to real images of choice through interpolation in its latent space. SegGuidedDiff has many applications, including cross-modality translation, and the generation of paired or counterfactual data. Our code is available at https://github.com/mazurowski-lab/segmentation-guided-diffusion.}
 }
 
-@inproceedings{konz2023effect,
+@inproceedings{konz2024effect,
   title={The Effect of Intrinsic Dataset Properties on Generalization: Unraveling Learning Differences Between Natural and Medical Images},
   author={Konz, Nicholas and Mazurowski, Maciej A.},
   booktitle={ICLR (The Twelfth International Conference on Learning Representations)},
   year={2024},
   arxiv={2401.08865},
   selected={true},
-  abbr={ICLR},
   bibtex_show = true,
   poster={intrinsicproperties_iclr2024.pdf},
+  preview={iclr24.png},
   code={https://github.com/mazurowski-lab/intrinsic-properties},
   abstract={This paper investigates discrepancies in how neural networks learn from different imaging domains, which are commonly overlooked when adopting computer vision techniques from the domain of natural images to other specialized domains such as medical images. Recent works have found that the generalization error of a trained network typically increases with the intrinsic dimension (d_data) of its training set. Yet, the steepness of this relationship varies significantly between medical (radiological) and natural imaging domains, with no existing theoretical explanation. We address this gap in knowledge by establishing and empirically validating a generalization scaling law with respect to d_data, and propose that the substantial scaling discrepancy between the two considered domains may be at least partially attributed to the higher intrinsic ``label sharpness'' (K_F) of medical imaging datasets, a metric which we propose. Next, we demonstrate an additional benefit of measuring the label sharpness of a training set: it is negatively correlated with the trained model's adversarial robustness, which notably leads to models for medical images having a substantially higher vulnerability to adversarial attack. Finally, we extend our d_data formalism to the related metric of learned representation intrinsic dimension (d_repr), derive a generalization scaling law with respect to d_repr, and show that d_data serves as an upper bound for d_repr. Our theoretical results are supported by thorough experiments with six models and eleven natural and medical imaging datasets over a range of training set sizes. Our findings offer insights into the influence of intrinsic dataset properties on generalization, representation learning, and robustness in deep neural networks. Code link: https://github.com/mazurowski-lab/intrinsic-properties.}
 }
@@ -80,8 +80,8 @@
   arxiv={2402.09604},
   selected={true},
   bibtex_show = true,
-  abbr={CVPR-W (Oral)},
   code={https://github.com/mazurowski-lab/single-image-test-time-adaptation},
+  preview={intent.png},
   abstract={Test-time adaptation (TTA) refers to adapting a trained model to a new domain during testing. Existing TTA techniques rely on having multiple test images from the same domain, yet this may be impractical in real-world applications such as medical imaging, where data acquisition is expensive and imaging conditions vary frequently. Here, we approach such a task, of adapting a medical image segmentation model with only a single unlabeled test image. Most TTA approaches, which directly minimize the entropy of predictions, fail to improve performance significantly in this setting, in which we also observe the choice of batch normalization (BN) layer statistics to be a highly important yet unstable factor due to only having a single test domain example. To overcome this, we propose to instead integrate over predictions made with various estimates of target domain statistics between the training and test statistics, weighted based on their entropy statistics. Our method, validated on 24 source/target domain splits across 3 medical image datasets surpasses the leading method by 2.9% Dice coefficient on average.}
 }
 
@@ -93,8 +93,8 @@
   arxiv={2404.07318},
   selected={true},
   bibtex_show = true,
-  abbr={MIDL},
   poster={translationmetrics_MIDL24.pdf},
+  preview={midl24.png},
   abstract={Modern medical image translation methods use generative models for tasks such as the conversion of CT images to MRI. Evaluating these methods typically relies on some chosen downstream task in the target domain, such as segmentation. On the other hand, task-agnostic metrics are attractive, such as the network feature-based perceptual metrics (e.g., FID) that are common to image translation in general computer vision. In this paper, we investigate evaluation metrics for medical image translation on two medical image translation tasks (GE breast MRI to Siemens breast MRI and lumbar spine MRI to CT), tested on various state-of-the-art translation methods. We show that perceptual metrics do not generally correlate with segmentation metrics due to them extending poorly to the anatomical constraints of this sub-field, with FID being especially inconsistent. However, we find that the lesser-used pixel-level SWD metric may be useful for subtle intra-modality translation. Our results demonstrate the need for further research into helpful metrics for medical image translation.}
 }
 
@@ -109,7 +109,7 @@
   arxiv={2305.03098},
   selected={true},
   bibtex_show = true,
-  abbr={Medical Image Analysis},
+  preview={picard.png},
   code={https://github.com/mazurowski-lab/picard-anomalydetection},
   abstract={Automated tumor detection in Digital Breast Tomosynthesis (DBT) is a difficult task due to natural tumor rarity, breast tissue variability, and high resolution. Given the scarcity of abnormal images and the abundance of normal images for this problem, an anomaly detection/localization approach could be well-suited. However, most anomaly localization research in machine learning focuses on non-medical datasets, and we find that these methods fall short when adapted to medical imaging datasets. The problem is alleviated when we solve the task from the image completion perspective, in which the presence of anomalies can be indicated by a discrepancy between the original appearance and its auto-completion conditioned on the surroundings. However, there are often many valid normal completions given the same surroundings, especially in the DBT dataset, making this evaluation criterion less precise. To address such an issue, we consider pluralistic image completion by exploring the distribution of possible completions instead of generating fixed predictions. This is achieved through our novel application of spatial dropout on the completion network during inference time only, which requires no additional training cost and is effective at generating diverse completions. We further propose minimum completion distance (MCD), a new metric for detecting anomalies, thanks to these stochastic completions. We provide theoretical as well as empirical support for the superiority over existing methods of using the proposed method for anomaly localization. On the DBT dataset, our model outperforms other state-of-the-art methods by at least 10% AUROC for pixel-level detection.}
 }
@@ -122,7 +122,7 @@
   arxiv={2310.03149},
   bibtex_show = true,
   selected={true},
-  abbr={NeurIPS-W (Oral)},
+  preview={attrib.png},
   poster={attrib_conceptattribution_poster.pdf},
   abstract={By now there is substantial evidence that deep learning models learn certain human-interpretable features as part of their internal representations of data. As having the right (or wrong) concepts is critical to trustworthy machine learning systems, it is natural to ask which inputs from the model's original training set were most important for learning a concept at a given layer. To answer this, we combine data attribution methods with methods for probing the concepts learned by a model. Training network and probe ensembles for two concept datasets on a range of network layers, we use the recently developed TRAK method for large-scale data attribution. We find some evidence for convergence, where removing the 10,000 top attributing images for a concept and retraining the model does not change the location of the concept in the network nor the probing sparsity of the concept. This suggests that rather than being highly dependent on a few specific examples, the features that inform the development of a concept are spread in a more diffuse manner across its exemplars, implying robustness in concept formation.}
 }
@@ -135,7 +135,7 @@
   arxiv={2310.14993},
   bibtex_show = true,
   selected={true},
-  abbr={EMNLP},
+  preview={emnlp23.png},
   abstract={As language models are applied to an increasing number of real-world applications, understanding their inner workings has become an important issue in model trust, interpretability, and transparency. In this work we show that representation dissimilarity measures, which are functions that measure the extent to which two model's internal representations differ, can be a valuable tool for gaining insight into the mechanics of language models. Among our insights are: (i) an apparent asymmetry in the internal representations of model using SoLU and GeLU activation functions, (ii) evidence that dissimilarity measures can identify and locate generalization properties of models that are invisible via in-distribution test set performance, and (iii) new evaluations of how language model features vary as width and depth are increased. Our results suggest that dissimilarity measures are a promising set of tools for shedding light on the inner workings of language models.}
 }
 
@@ -150,12 +150,12 @@
   arxiv={2304.10517},
   selected={true},
   bibtex_show = true,
-  abbr={Medical Image Analysis},
+  preview={sam23.png},
   code={https://github.com/mazurowski-lab/segment-anything-medical-evaluation},
   abstract={Training segmentation models for medical images continues to be challenging due to the limited availability of data annotations. Segment Anything Model (SAM) is a foundation model that is intended to segment user-defined objects of interest in an interactive manner. While the performance on natural images is impressive, medical image domains pose their own set of challenges. Here, we perform an extensive evaluation of SAM's ability to segment medical images on a collection of 19 medical imaging datasets from various modalities and anatomies. We report the following findings: (1) SAM's performance based on single prompts highly varies depending on the dataset and the task, from IoU=0.1135 for spine MRI to IoU=0.8650 for hip X-ray. (2) Segmentation performance appears to be better for well-circumscribed objects with prompts with less ambiguity and poorer in various other scenarios such as the segmentation of brain tumors. (3) SAM performs notably better with box prompts than with point prompts. (4) SAM outperforms similar methods RITM, SimpleClick, and FocalClick in almost all single-point prompt settings. (5) When multiple-point prompts are provided iteratively, SAM's performance generally improves only slightly while other methods' performance improves to the level that surpasses SAM's point-based performance. We also provide several illustrations for SAM's performance on all tested datasets, iterative segmentation, and SAM's behavior given prompt ambiguity. We conclude that SAM shows impressive zero-shot segmentation performance for certain medical imaging datasets, but moderate to poor performance for others. SAM has the potential to make a significant impact in automated medical image segmentation in medical imaging, but appropriate care needs to be applied when using it.}
 }
 
-@inproceedings{konz2024reverse,
+@inproceedings{konz2023reverse,
   title={Reverse engineering breast mris: Predicting acquisition parameters directly from images},
   author={Konz, Nicholas and Mazurowski, Maciej A.},
   booktitle={MIDL (Medical Imaging with Deep Learning)},
@@ -164,7 +164,7 @@
   arxiv={2303.04911},
   selected={true},
   bibtex_show = true,
-  abbr={MIDL},
+  preview={midl23.png},
   poster={midl23_reverseengineering_poster.pdf},
   code={https://github.com/mazurowski-lab/MRI-parameter-prediction},
   abstract={The image acquisition parameters (IAPs) used to create MRI scans are central to defining the appearance of the images. Deep learning models trained on data acquired using certain parameters might not generalize well to images acquired with different parameters. Being able to recover such parameters directly from an image could help determine whether a deep learning model is applicable, and could assist with data harmonization and/or domain adaptation. Here, we introduce a neural network model that can predict many complex IAPs used to generate an MR image with high accuracy solely using the image, with a single forward pass. These predicted parameters include field strength, echo and repetition times, acquisition matrix, scanner model, scan options, and others. Even challenging parameters such as contrast agent type can be predicted with good accuracy. We perform a variety of experiments and analyses of our model's ability to predict IAPs on many MRI scans of new patients, and demonstrate its usage in a realistic application. Predicting IAPs from the images is an important step toward better understanding the relationship between image appearance and IAPs. This in turn will advance the understanding of many concepts related to the generalizability of neural network models on medical images, including domain shift, domain adaptation, and data harmonization.}
@@ -181,8 +181,8 @@
   publisher={American Medical Association},
   html={https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2801740},
   selected={true},
+  preview={dbtex.png},
   bibtex_show = true,
-  abbr={JAMA Network Open},
   code={https://github.com/mazurowski-lab/DBT-cancer-detection-algorithms},
   abstract={Importance: An accurate and robust artificial intelligence (AI) algorithm for detecting cancer in digital breast tomosynthesis (DBT) could significantly improve detection accuracy and reduce health care costs worldwide. Objectives: To make training and evaluation data for the development of AI algorithms for DBT analysis available, to develop well-defined benchmarks, and to create publicly available code for existing methods. Design, Setting, and Participants: This diagnostic study is based on a multi-institutional international grand challenge in which research teams developed algorithms to detect lesions in DBT. A data set of 22 032 reconstructed DBT volumes was made available to research teams. Phase 1, in which teams were provided 700 scans from the training set, 120 from the validation set, and 180 from the test set, took place from December 2020 to January 2021, and phase 2, in which teams were given the full data set, took place from May to July 2021. Main Outcomes and Measures: The overall performance was evaluated by mean sensitivity for biopsied lesions using only DBT volumes with biopsied lesions; ties were broken by including all DBT volumes. Results: A total of 8 teams participated in the challenge. The team with the highest mean sensitivity for biopsied lesions was the NYU B-Team, with 0.957 (95% CI, 0.924-0.984), and the second-place team, ZeDuS, had a mean sensitivity of 0.926 (95% CI, 0.881-0.964). When the results were aggregated, the mean sensitivity for all submitted algorithms was 0.879; for only those who participated in phase 2, it was 0.926. Conclusions and Relevance: In this diagnostic study, an international competition produced algorithms with high sensitivity for using AI to detect lesions on DBT images. A standardized performance benchmark for the detection task using publicly available clinical imaging data was released, with detailed descriptions and analyses of submitted algorithms accompanied by a public release of their predictions and code for selected methods. These resources will serve as a foundation for future research on computer-assisted diagnosis methods for DBT, significantly lowering the barrier of entry for new researchers.}
 }
@@ -196,7 +196,7 @@
   html={https://pubmed.ncbi.nlm.nih.gov/37695965/},
   selected={true},
   bibtex_show = true,
-  abbr={IEEE TMI},
+  preview={swssl.png},
   code={https://github.com/mazurowski-lab/swssl-for-anomaly-detection},
   abstract={Anomaly detection (AD) aims to determine if an instance has properties different from those seen in normal cases. The success of this technique depends on how well a neural network learns from normal instances. We observe that the learning difficulty scales exponentially with the input resolution, making it infeasible to apply AD to high-resolution images. Resizing them to a lower resolution is a compromising solution and does not align with clinical practice where the diagnosis could depend on image details. In this work, we propose to train the network and perform inference at the patch level, through the sliding window algorithm. This simple operation allows the network to receive high-resolution images but introduces additional training difficulties, including inconsistent image structure and higher variance. We address these concerns by setting the network's objective to learn augmentation-invariant features. We further study the augmentation function in the context of medical imaging. In particular, we observe that the resizing operation, a key augmentation in general computer vision literature, is detrimental to detection accuracy, and the inverting operation can be beneficial. We also propose a new module that encourages the network to learn from adjacent patches to boost detection performance. Extensive experiments are conducted on breast tomosynthesis and chest X-ray datasets and our method improves 8.03% and 5.66% AUC on image-level classification respectively over the current leading techniques. The experimental results demonstrate the effectiveness of our approach.}
 }
@@ -211,7 +211,7 @@
   arxiv={2207.02797},
   selected={true},
   bibtex_show = true,
-  abbr={MICCAI},
+  preview={miccai22.png},
   poster={miccai22_intrinsicmanifolds_poster.pdf},
   code={https://github.com/mazurowski-lab/radiologyintrinsicmanifolds},
   abstract={The manifold hypothesis is a core mechanism behind the success of deep learning, so understanding the intrinsic manifold structure of image data is central to studying how neural networks learn from the data. Intrinsic dataset manifolds and their relationship to learning difficulty have recently begun to be studied for the common domain of natural images, but little such research has been attempted for radiological images. We address this here. First, we compare the intrinsic manifold dimensionality of radiological and natural images. We also investigate the relationship between intrinsic dimensionality and generalization ability over a wide range of datasets. Our analysis shows that natural image datasets generally have a higher number of intrinsic dimensions than radiological images. However, the relationship between generalization ability and intrinsic dimensionality is much stronger for medical images, which could be explained as radiological images having intrinsic features that are more difficult to learn. These results give a more principled underpinning for the intuition that radiological images can be more challenging to apply deep learning to than natural image datasets common to machine learning research. We believe rather than directly applying models developed for natural images to the radiological imaging domain, more care should be taken to developing architectures and algorithms that are more tailored to the specific characteristics of this domain. The research shown in our paper, demonstrating these characteristics and the differences from natural images, is an important first step in this direction.}
@@ -229,7 +229,7 @@
   arxiv={1807.05276},
   selected={true},
   bibtex_show = true,
-  abbr={ApJS},
+  preview={rcr.png},
   code={https://github.com/nickk124/robust-outlier-rejection},
   abstract={Sigma clipping is commonly used in astronomy for outlier rejection, but the number of standard deviations beyond which one should clip data from a sample ultimately depends on the size of the sample. Chauvenet rejection is one of the oldest, and simplest, ways to account for this, but, like sigma clipping, depends on the sample's mean and standard deviation, neither of which are robust quantities: Both are easily contaminated by the very outliers they are being used to reject. Many, more robust measures of central tendency, and of sample deviation, exist, but each has a tradeoff with precision. Here, we demonstrate that outlier rejection can be both very robust and very precise if decreasingly robust but increasingly precise techniques are applied in sequence. To this end, we present a variation on Chauvenet rejection that we call "robust" Chauvenet rejection (RCR), which uses three decreasingly robust/increasingly precise measures of central tendency, and four decreasingly robust/increasingly precise measures of sample deviation. We show this sequential approach to be very effective for a wide variety of contaminant types, even when a significant -- even dominant -- fraction of the sample is contaminated, and especially when the contaminants are strong. Furthermore, we have developed a bulk-rejection variant, to significantly decrease computing times, and RCR can be applied both to weighted data, and when fitting parameterized models to data. We present aperture photometry in a contaminated, crowded field as an example. RCR may be used by anyone at https://github.com/nickk124/robust-outlier-rejection, and source code is available there as well.}
 }
