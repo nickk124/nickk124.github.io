@@ -21,7 +21,7 @@
   author={Zhang*, Yixin and Konz*, Nicholas and Kramer, Kevin and Mazurowski, Maciej A.},
   journal={arXiv preprint},
   year={2024},
-  booktitle={arXiv},
+  journal={arXiv},
   arxiv={2412.04243},
   selected={true},
   bibtex_show = true,
@@ -30,11 +30,10 @@
   abstract={Segment Anything Model (SAM) has shown impressive performance in interactive and zero-shot segmentation across diverse domains, suggesting that they have learned a general concept of "objects" from their large-scale training. However, we observed that SAM struggles with certain types of objects, particularly those featuring dense, tree-like structures and low textural contrast from their surroundings. These failure modes are critical for understanding its limitations in real-world use. In order to systematically examine this issue, we propose metrics to quantify two key object characteristics: tree-likeness and textural separability. Through extensive controlled synthetic experiments and testing on real datasets, we demonstrate that SAM's performance is noticeably correlated with these factors. We link these behaviors under the concept of "textural confusion", where SAM misinterprets local structure as global texture, leading to over-segmentation, or struggles to differentiate objects from similarly textured backgrounds. These findings offer the first quantitative framework to model SAM's challenges, providing valuable insights into its limitations and guiding future improvements for vision foundation models.}
 }
 
-@inproceedings{konz2024pre,
+@article{konz2024pre,
   title={Pre-processing and Compression: Understanding Hidden Representation Refinement Across Imaging Domains via Intrinsic Dimension},
   author={Konz, Nicholas and Mazurowski, Maciej A.},
-  booktitle={NeurIPS (Advances in Neural Information Processing Systems): Workshop on Scientific Methods for Understanding Deep Learning},
-  year={2024},
+  journal={NeurIPS 2024: Workshop on Scientific Methods for Understanding Deep Learning},
   arxiv={2408.08381},
   selected={true},
   bibtex_show = true,
@@ -43,11 +42,10 @@
   abstract={In recent years, there has been interest in how geometric properties such as intrinsic dimension (ID) of a neural network's hidden representations change through its layers, and how such properties are predictive of important model behavior such as generalization ability. However, evidence has begun to emerge that such behavior can change significantly depending on the domain of the network's training data, such as natural versus medical images. Here, we further this inquiry by exploring how the ID of a network's learned representations changes through its layers, in essence, characterizing how the network successively refines the information content of input data to be used for predictions. Analyzing eleven natural and medical image datasets across six network architectures, we find that how ID changes through the network differs noticeably between natural and medical image models. Specifically, medical image models peak in representation ID earlier in the network, implying a difference in the image features and their abstractness that are typically used for downstream tasks in these domains. Additionally, we discover a strong correlation of this peak representation ID with the ID of the data in its input space, implying that the intrinsic information content of a model's learned representations is guided by that of the data it was trained on. Overall, our findings emphasize notable discrepancies in network behavior between natural and non-natural imaging domains regarding hidden representation information content, and provide further insights into how a network's learned features are shaped by its training data.}
 }
 
-@inproceedings{konz2024anatomically,
+@article{konz2024anatomically,
   title={Anatomically-Controllable Medical Image Generation with Segmentation-Guided Diffusion Models},
   author={Konz, Nicholas and Chen, Yuwen and Dong, Haoyu and Mazurowski, Maciej A.},
-  booktitle={MICCAI (International Conference on Medical Image Computing and Computer-Assisted Intervention)},
-  year={2024},
+  journal={MICCAI 2024},
   organization={Springer},
   arxiv={2402.05210},
   selected={true},
@@ -58,11 +56,10 @@
   abstract={Diffusion models have enabled remarkably high-quality medical image generation, yet it is challenging to enforce anatomical constraints in generated images. To this end, we propose a diffusion model-based method that supports anatomically-controllable medical image generation, by following a multi-class anatomical segmentation mask at each sampling step. We additionally introduce a random mask ablation training algorithm to enable conditioning on a selected combination of anatomical constraints while allowing flexibility in other anatomical areas. We compare our method ("SegGuidedDiff") to existing methods on breast MRI and abdominal/neck-to-pelvis CT datasets with a wide range of anatomical objects. Results show that our method reaches a new state-of-the-art in the faithfulness of generated images to input anatomical masks on both datasets, and is on par for general anatomical realism. Finally, our model also enjoys the extra benefit of being able to adjust the anatomical similarity of generated images to real images of choice through interpolation in its latent space. SegGuidedDiff has many applications, including cross-modality translation, and the generation of paired or counterfactual data. Our code is available at https://github.com/mazurowski-lab/segmentation-guided-diffusion.}
 }
 
-@inproceedings{konz2024effect,
+@article{konz2024effect,
   title={The Effect of Intrinsic Dataset Properties on Generalization: Unraveling Learning Differences Between Natural and Medical Images},
   author={Konz, Nicholas and Mazurowski, Maciej A.},
-  booktitle={ICLR (The Twelfth International Conference on Learning Representations)},
-  year={2024},
+  journal={ICLR 2024},
   arxiv={2401.08865},
   selected={true},
   bibtex_show = true,
@@ -72,11 +69,10 @@
   abstract={This paper investigates discrepancies in how neural networks learn from different imaging domains, which are commonly overlooked when adopting computer vision techniques from the domain of natural images to other specialized domains such as medical images. Recent works have found that the generalization error of a trained network typically increases with the intrinsic dimension (d_data) of its training set. Yet, the steepness of this relationship varies significantly between medical (radiological) and natural imaging domains, with no existing theoretical explanation. We address this gap in knowledge by establishing and empirically validating a generalization scaling law with respect to d_data, and propose that the substantial scaling discrepancy between the two considered domains may be at least partially attributed to the higher intrinsic ``label sharpness'' (K_F) of medical imaging datasets, a metric which we propose. Next, we demonstrate an additional benefit of measuring the label sharpness of a training set: it is negatively correlated with the trained model's adversarial robustness, which notably leads to models for medical images having a substantially higher vulnerability to adversarial attack. Finally, we extend our d_data formalism to the related metric of learned representation intrinsic dimension (d_repr), derive a generalization scaling law with respect to d_repr, and show that d_data serves as an upper bound for d_repr. Our theoretical results are supported by thorough experiments with six models and eleven natural and medical imaging datasets over a range of training set sizes. Our findings offer insights into the influence of intrinsic dataset properties on generalization, representation learning, and robustness in deep neural networks. Code link: https://github.com/mazurowski-lab/intrinsic-properties.}
 }
 
-@inproceedings{dong2024intent,
+@article{dong2024intent,
   title={Medical Image Segmentation with InTEnt: Integrated Entropy Weighting for Single Image Test-Time Adaptation},
   author={Dong, Haoyu and Konz, Nicholas and Gu, Hanxue and Mazurowski, Maciej A.},
-  booktitle={CVPR (Conference on Computer Vision and Pattern Recognition): Workshop on Domain adaptation, Explainability, Fairness in AI for Medical Image Analysis (Oral)},
-  year={2024},
+  journal={CVPR 2024: Workshop on Domain adaptation, Explainability, Fairness in AI for Medical Image Analysis (Oral)},
   arxiv={2402.09604},
   selected={true},
   bibtex_show = true,
@@ -85,11 +81,10 @@
   abstract={Test-time adaptation (TTA) refers to adapting a trained model to a new domain during testing. Existing TTA techniques rely on having multiple test images from the same domain, yet this may be impractical in real-world applications such as medical imaging, where data acquisition is expensive and imaging conditions vary frequently. Here, we approach such a task, of adapting a medical image segmentation model with only a single unlabeled test image. Most TTA approaches, which directly minimize the entropy of predictions, fail to improve performance significantly in this setting, in which we also observe the choice of batch normalization (BN) layer statistics to be a highly important yet unstable factor due to only having a single test domain example. To overcome this, we propose to instead integrate over predictions made with various estimates of target domain statistics between the training and test statistics, weighted based on their entropy statistics. Our method, validated on 24 source/target domain splits across 3 medical image datasets surpasses the leading method by 2.9% Dice coefficient on average.}
 }
 
-@inproceedings{konz2024rethinking,
+@article{konz2024rethinking,
   title={Rethinking Perceptual Metrics for Medical Image Translation},
   author={Nicholas Konz and Yuwen Chen and Hanxue Gu and Haoyu Dong and Maciej A. Mazurowski},
-  booktitle={MIDL (Medical Imaging with Deep Learning)},
-  year={2024},
+  journal={MIDL 2024},
   arxiv={2404.07318},
   selected={true},
   bibtex_show = true,
@@ -114,11 +109,10 @@
   abstract={Automated tumor detection in Digital Breast Tomosynthesis (DBT) is a difficult task due to natural tumor rarity, breast tissue variability, and high resolution. Given the scarcity of abnormal images and the abundance of normal images for this problem, an anomaly detection/localization approach could be well-suited. However, most anomaly localization research in machine learning focuses on non-medical datasets, and we find that these methods fall short when adapted to medical imaging datasets. The problem is alleviated when we solve the task from the image completion perspective, in which the presence of anomalies can be indicated by a discrepancy between the original appearance and its auto-completion conditioned on the surroundings. However, there are often many valid normal completions given the same surroundings, especially in the DBT dataset, making this evaluation criterion less precise. To address such an issue, we consider pluralistic image completion by exploring the distribution of possible completions instead of generating fixed predictions. This is achieved through our novel application of spatial dropout on the completion network during inference time only, which requires no additional training cost and is effective at generating diverse completions. We further propose minimum completion distance (MCD), a new metric for detecting anomalies, thanks to these stochastic completions. We provide theoretical as well as empirical support for the superiority over existing methods of using the proposed method for anomaly localization. On the DBT dataset, our model outperforms other state-of-the-art methods by at least 10% AUROC for pixel-level detection.}
 }
 
-@inproceedings{konz2023attributing,
+@article{konz2023attributing,
   title={Attributing Learned Concepts in Neural Networks to Training Data},
   author={Konz, Nicholas and Godfrey, Charles and Shapiro, Madelyn and Tu, Jonathan and Kvinge, Henry and Brown, Davis},
-  booktitle={NeurIPS (Advances in Neural Information Processing Systems): Workshop on Attributing Model Behavior at Scale (Oral)},
-  year={2023},
+  journal={NeurIPS 2023: Workshop on Attributing Model Behavior at Scale (Oral)},
   arxiv={2310.03149},
   bibtex_show = true,
   selected={true},
@@ -127,11 +121,10 @@
   abstract={By now there is substantial evidence that deep learning models learn certain human-interpretable features as part of their internal representations of data. As having the right (or wrong) concepts is critical to trustworthy machine learning systems, it is natural to ask which inputs from the model's original training set were most important for learning a concept at a given layer. To answer this, we combine data attribution methods with methods for probing the concepts learned by a model. Training network and probe ensembles for two concept datasets on a range of network layers, we use the recently developed TRAK method for large-scale data attribution. We find some evidence for convergence, where removing the 10,000 top attributing images for a concept and retraining the model does not change the location of the concept in the network nor the probing sparsity of the concept. This suggests that rather than being highly dependent on a few specific examples, the features that inform the development of a concept are spread in a more diffuse manner across its exemplars, implying robustness in concept formation.}
 }
 
-@inproceedings{brown2023understanding,
+@article{brown2023understanding,
   title={Understanding the Inner-workings of Language Models Through Representation Dissimilarity},
   author={Brown, Davis and Godfrey, Charles and Konz, Nicholas and Tu, Jonathan and Kvinge, Henry},
-  booktitle={EMNLP (Conference on Empirical Methods in Natural Language Processing)},
-  year={2023},
+  journal={EMNLP 2023},
   arxiv={2310.14993},
   bibtex_show = true,
   selected={true},
@@ -155,11 +148,10 @@
   abstract={Training segmentation models for medical images continues to be challenging due to the limited availability of data annotations. Segment Anything Model (SAM) is a foundation model that is intended to segment user-defined objects of interest in an interactive manner. While the performance on natural images is impressive, medical image domains pose their own set of challenges. Here, we perform an extensive evaluation of SAM's ability to segment medical images on a collection of 19 medical imaging datasets from various modalities and anatomies. We report the following findings: (1) SAM's performance based on single prompts highly varies depending on the dataset and the task, from IoU=0.1135 for spine MRI to IoU=0.8650 for hip X-ray. (2) Segmentation performance appears to be better for well-circumscribed objects with prompts with less ambiguity and poorer in various other scenarios such as the segmentation of brain tumors. (3) SAM performs notably better with box prompts than with point prompts. (4) SAM outperforms similar methods RITM, SimpleClick, and FocalClick in almost all single-point prompt settings. (5) When multiple-point prompts are provided iteratively, SAM's performance generally improves only slightly while other methods' performance improves to the level that surpasses SAM's point-based performance. We also provide several illustrations for SAM's performance on all tested datasets, iterative segmentation, and SAM's behavior given prompt ambiguity. We conclude that SAM shows impressive zero-shot segmentation performance for certain medical imaging datasets, but moderate to poor performance for others. SAM has the potential to make a significant impact in automated medical image segmentation in medical imaging, but appropriate care needs to be applied when using it.}
 }
 
-@inproceedings{konz2023reverse,
+@article{konz2023reverse,
   title={Reverse engineering breast mris: Predicting acquisition parameters directly from images},
   author={Konz, Nicholas and Mazurowski, Maciej A.},
-  booktitle={MIDL (Medical Imaging with Deep Learning)},
-  year={2023},
+  journal={MIDL 2023},
   organization={PMLR},
   arxiv={2303.04911},
   selected={true},
@@ -173,7 +165,7 @@
 @article{konz2023competition,
   title={A competition, benchmark, code, and data for using artificial intelligence to detect lesions in digital breast tomosynthesis},
   author={Konz, Nicholas and Buda, Mateusz and Gu, Hanxue and Saha, Ashirbani and Yang, Jichen and Ch{\l}{\k{e}}dowski, Jakub and Park, Jungkyu and Witowski, Jan and Geras, Krzysztof J and Shoshan, Yoel and others},
-  journal={JAMA network open},
+  journal={JAMA Network Open},
   volume={6},
   number={2},
   pages={e230524--e230524},
@@ -201,12 +193,11 @@
   abstract={Anomaly detection (AD) aims to determine if an instance has properties different from those seen in normal cases. The success of this technique depends on how well a neural network learns from normal instances. We observe that the learning difficulty scales exponentially with the input resolution, making it infeasible to apply AD to high-resolution images. Resizing them to a lower resolution is a compromising solution and does not align with clinical practice where the diagnosis could depend on image details. In this work, we propose to train the network and perform inference at the patch level, through the sliding window algorithm. This simple operation allows the network to receive high-resolution images but introduces additional training difficulties, including inconsistent image structure and higher variance. We address these concerns by setting the network's objective to learn augmentation-invariant features. We further study the augmentation function in the context of medical imaging. In particular, we observe that the resizing operation, a key augmentation in general computer vision literature, is detrimental to detection accuracy, and the inverting operation can be beneficial. We also propose a new module that encourages the network to learn from adjacent patches to boost detection performance. Extensive experiments are conducted on breast tomosynthesis and chest X-ray datasets and our method improves 8.03% and 5.66% AUC on image-level classification respectively over the current leading techniques. The experimental results demonstrate the effectiveness of our approach.}
 }
 
-@inproceedings{konz2022intrinsic,
+@article{konz2022intrinsic,
   title={The Intrinsic Manifolds of Radiological Images and their Role in Deep Learning},
   author={Konz, Nicholas and Gu, Hanxue and Dong, Haoyu and Mazurowski, Maciej A.},
-  booktitle={MICCAI (International Conference on Medical Image Computing and Computer-Assisted Intervention)},
+  journal={MICCAI 2022},
   pages={684--694},
-  year={2022},
   organization={Springer},
   arxiv={2207.02797},
   selected={true},
