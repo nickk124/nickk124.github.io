@@ -2,12 +2,13 @@
 layout: page
 permalink: /teaching/
 title: Teaching
-description: Courses that I have taught.
+description: Courses that I have taught or assisted with.
 nav: true
 nav_order: 3
 ---
 
 ## Duke University
+
 *(Graduate Teaching Assistant)*
 
 - ECE 685D: Introduction to Deep Learning (Fall 2022 & 2023)
