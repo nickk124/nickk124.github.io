@@ -15,6 +15,7 @@ nav_order: 2
 - CVPR *(IEEE/CVF Conference on Computer Vision and Pattern Recognition)*, **2025**
 - ECCV *(European Conference on Computer Vision)*, **2024**
 - MICCAI *(Medical Image Computing and Computer Assisted Intervention)*, **2024**
+- MIDL *(Medical Imaging with Deep Learning)*, **2025**
 - WACV *(IEEE CVF Winter Conference on Applications of Computer Vision)*, **2023, 2024**
 - NeurIPS *(Conference on Neural Information Processing Systems)*: Workshop on Scientific Methods for Understanding Deep Learning, **2024**
 
