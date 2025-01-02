@@ -28,4 +28,4 @@ I have also worked as a research intern in the Math, Stats, and Data Science Gro
 
 See my [Google Scholar page](https://scholar.google.com/citations?hl=en&user=a9rXidMAAAAJ&view_op=list_works&sortby=pubdate) for a full list of my publications, with select papers highlighted in the section below.
 
-On my free time I like to practice jiu-jitsu and yoga, cook, listen to and play music, and read.
+In my free time I like to train jiu-jitsu, cook, listen to and play music, and read.
