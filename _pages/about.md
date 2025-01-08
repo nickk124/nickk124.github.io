@@ -26,6 +26,4 @@ Additionally, I'm drawn to the intersection of ML and science: understanding dee
 
 I have also worked as a research intern in the Math, Stats, and Data Science Group at [PNNL](https://www.pnnl.gov/). My undergrad was at UNC in physics and math, with research in statistical techniques for astronomy.
 
-See my [Google Scholar page](https://scholar.google.com/citations?hl=en&user=a9rXidMAAAAJ&view_op=list_works&sortby=pubdate) for a full list of my publications, with select papers highlighted in the section below. My CV is also available [here](/assets/pdf/nick_konz_cv.pdf).
-
 In my free time I like to train jiu-jitsu, cook, listen to and play music, and read.
