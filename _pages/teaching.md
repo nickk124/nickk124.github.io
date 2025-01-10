@@ -4,7 +4,7 @@ permalink: /teaching/
 title: Teaching
 description: Courses that I have taught or assisted with.
 nav: true
-nav_order: 3
+nav_order: 2
 ---
 
 ## Duke University

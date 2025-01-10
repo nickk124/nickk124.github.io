@@ -4,7 +4,7 @@ permalink: /talks/
 title: Talks, Posters, and Tutorials
 description: Talks/posters that I have given and tutorials that I have made.
 nav: true
-nav_order: 1
+nav_order: 3
 ---
 
 ## Talks
