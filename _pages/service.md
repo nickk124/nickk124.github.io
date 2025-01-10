@@ -2,7 +2,7 @@
 layout: page
 permalink: /service/
 title: Reviewing/Service
-description: Reviewing and other service experience.
+description: Reviewing and other academic service experience.
 nav: true
 nav_order: 1
 ---
