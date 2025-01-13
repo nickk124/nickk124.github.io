@@ -26,4 +26,4 @@ Additionally, I'm drawn to the intersection of ML and science: understanding dee
 
 I have also worked as a research intern in the Math, Stats, and Data Science Group at [PNNL](https://www.pnnl.gov/). My undergrad was at UNC in physics and math, with research in statistical techniques for astronomy.
 
-In my free time I like to train jiu-jitsu, cook, listen to and play music, and read.
+In my free time I like to exercise, cook, listen to and play music, and read.
