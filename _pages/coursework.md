@@ -9,18 +9,19 @@ nav_order: 5
 
 ### Duke University (Graduate)
 
-- Generative Models (CS 590-01, Prof. Bhuwan Dhingra)
+- Generative Models (CS 590, Prof. Bhuwan Dhingra)
 - Natural Language Processing (CS 572, Prof. Monica Agrawal)
 - Machine Learning in Adversarial Settings (ECE 663, Prof. Neil Gong)
-- Advanced Topics in Deep Learning (ECE 590-07, Prof. Vahid Tarokh)
-- Introduction to Deep Learning (ECE 685D, Prof. Vahid Tarokh)
-- Engineering Deep Neural Networks (ECE 590-02/ECE 661, Prof. Yiran Chen)
-- Probabilistic Machine Learning (ECE 682D, Prof. Eric Laber)
+- Advanced Topics in Deep Learning (CS 590/ECE 590, Prof. Vahid Tarokh)
+- Introduction to Deep Learning (CS 675D/ECE 685D, Prof. Vahid Tarokh)
+- Engineering Deep Neural Networks (ECE 661, Prof. Yiran Chen)
+- Probabilistic Machine Learning (CS 571D/ECE 682D, Prof. Eric Laber)
 - Vector Space Methods (ECE 586, Prof. Henry Pfister)
 
 ### UNC Chapel Hill (Undergraduate)
 
 *Mathematics*
+
 - Numerical Techniques (PHYS 331)
 - Physical Modeling (PHYS 358)
 - Mathematical Methods I & II (ODEs II, Fourier Analysis, Partial Differential Equations, Complex Analysis) (MATH 529 & 529)
