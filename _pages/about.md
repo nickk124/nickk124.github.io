@@ -18,7 +18,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm a Ph.D. candidate in machine learning at Duke University, working under [Maciej Mazurowski](https://sites.duke.edu/mazurowski/). My research focuses on deep learning for medical image analysis on a spectrum from foundational to application-oriented, with an emphasis on topics like domain adaptation, image-to-image translation, and image generation.
+I'm a Ph.D. candidate studying machine learning at Duke University, working under [Maciej Mazurowski](https://sites.duke.edu/mazurowski/). My research focuses on deep learning for medical image analysis on a spectrum from foundational to application-oriented, with an emphasis on topics like domain adaptation, image-to-image translation, and image generation.
 
 I am particularly interested in how foundational machine learning concepts—such as [generalization, intrinsic geometric dataset properties](https://arxiv.org/abs/2401.08865), and [image distribution distance metrics](https://arxiv.org/abs/2412.01496)-behave in medical image analysis and other secondary computer vision domains. This includes exploring how these concepts need to be adapted for unique challenges in these fields.
 
