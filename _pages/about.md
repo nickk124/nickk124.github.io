@@ -11,6 +11,7 @@ profile:
   more_info: >
     <p>Email: nicholas (dot) konz (at) duke (dot) edu</p>
     <p>Bluesky 🦋: @nickkonz.bsky.social</p>
+    <p><a href="https://nickk124.github.io/assets/pdf/nicholaskonzCV_2025.pdf">CV</p>
 
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
