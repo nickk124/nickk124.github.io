@@ -26,4 +26,4 @@ Beyond medical imaging, I'm drawn to the intersection of machine learning and sc
 
 Previously, I worked as a research intern in the Math, Stats, and Data Science Group at [PNNL](https://www.pnnl.gov/). I earned my undergraduate degree at UNC, double-majoring in physics and mathematics, where I conducted research on statistical techniques for astronomy.
 
-<!-- My CV can be found [here](https://nickk124.github.io/assets/pdf/nicholaskonzCV_2025.pdf). -->
+My CV can be found [here](https://nickk124.github.io/assets/pdf/NicholasKonzCV.pdf).
