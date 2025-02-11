@@ -25,5 +25,3 @@ I am particularly interested in how foundational machine learning concepts—suc
 Beyond medical imaging, I'm drawn to the intersection of machine learning and science: understanding deep learning through a scientific lens, and leveraging it for scientific modeling, discovery, and applications in science-adjacent domains.
 
 Previously, I worked as a research intern in the Math, Stats, and Data Science Group at [PNNL](https://www.pnnl.gov/). I earned my undergraduate degree at UNC, double-majoring in physics and mathematics, where I conducted research on statistical techniques for astronomy.
-
-My CV can be found [here](https://nickk124.github.io/assets/pdf/NicholasKonzCV.pdf).
