@@ -2,9 +2,9 @@
 layout: page
 permalink: /outreach/
 title: Outreach
-description: Education and outreach activities that I have participated in.
+description:
 nav: true
-nav_order: 4
+nav_order: 3
 ---
 
 ## ERIRA (Educational Research in Radio Astronomy)

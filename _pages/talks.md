@@ -2,9 +2,9 @@
 layout: page
 permalink: /talks/
 title: Talks, Posters, and Tutorials
-description: Talks/posters that I have given and tutorials that I have made.
+description:
 nav: true
-nav_order: 3
+nav_order: 2
 ---
 
 ## Talks
