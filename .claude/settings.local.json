@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:nickk124.github.io)",
+      "Bash(git checkout:*)",
+      "WebFetch(domain:scholar.google.com)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(git add:*)",
+      "Bash(git revert:*)",
+      "Bash(gh pr create:*)",
+      "Bash(git merge:*)",
+      "Bash(git push:*)"
+    ],
+    "deny": []
+  }
+}

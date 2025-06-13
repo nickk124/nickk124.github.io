@@ -3,54 +3,63 @@
     {
       "id": "physics",
       "label": "Physics",
+      "description": "Mathematical foundations and analytical thinking from undergraduate physics studies",
       "category": "foundation",
       "color": "#3498db"
     },
     {
       "id": "astronomy",
       "label": "Astronomy",
+      "description": "Statistical analysis of astronomical data and large-scale dataset processing",
       "category": "foundation",
       "color": "#3498db"
     },
     {
       "id": "statistics",
       "label": "Statistics",
+      "description": "Statistical methods bridging physical sciences and machine learning",
       "category": "methods",
       "color": "#f39c12"
     },
     {
       "id": "machine_learning",
       "label": "Machine Learning",
+      "description": "Core ML techniques forming the backbone of modern AI applications",
       "category": "core",
       "color": "#e74c3c"
     },
     {
       "id": "computer_vision",
       "label": "Computer Vision",
+      "description": "Extracting meaningful information from images using deep learning",
       "category": "core",
       "color": "#e74c3c"
     },
     {
       "id": "medical_imaging",
       "label": "Medical Imaging",
+      "description": "Application of ML techniques for diagnostic and therapeutic purposes",
       "category": "application",
       "color": "#2ecc71"
     },
     {
       "id": "generative_models",
       "label": "Generative Models",
+      "description": "Creating new data samples and enabling advanced image synthesis",
       "category": "technique",
       "color": "#9b59b6"
     },
     {
       "id": "domain_adaptation",
       "label": "Domain Adaptation",
+      "description": "Ensuring models work across different data distributions and domains",
       "category": "technique",
       "color": "#9b59b6"
     },
     {
       "id": "deep_learning",
       "label": "Deep Learning",
+      "description": "Computational framework for complex pattern recognition and learning",
       "category": "core",
       "color": "#e74c3c"
     }

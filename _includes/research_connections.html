@@ -433,22 +433,11 @@ class ResearchConnectionsViz {
   
   updateInfoPanel(node) {
     const infoPanel = document.getElementById('connection-info');
-    const descriptions = {
-      'physics': 'Foundation in physics provides the mathematical and analytical framework for understanding complex systems.',
-      'astronomy': 'Astronomical research developed skills in statistical analysis and data processing for large-scale datasets.',
-      'statistics': 'Statistical methods bridge the gap between physical sciences and machine learning approaches.',
-      'machine_learning': 'Core machine learning techniques form the backbone of modern AI applications.',
-      'computer_vision': 'Computer vision specialization focuses on extracting meaningful information from images.',
-      'medical_imaging': 'Application of ML techniques to medical imaging for diagnostic and therapeutic purposes.',
-      'generative_models': 'Generative models create new data samples and enable advanced image synthesis.',
-      'domain_adaptation': 'Domain adaptation techniques ensure models work across different data distributions.',
-      'deep_learning': 'Deep learning provides the computational framework for complex pattern recognition.'
-    };
     
     infoPanel.innerHTML = `
       <h4>${node.label}</h4>
       <p><strong>Category:</strong> ${node.category.charAt(0).toUpperCase() + node.category.slice(1)}</p>
-      <p>${descriptions[node.id] || 'Key research area in my academic journey.'}</p>
+      <p>${node.description || 'Key research area in my academic journey.'}</p>
     `;
   }
   

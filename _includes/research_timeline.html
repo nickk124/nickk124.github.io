@@ -286,11 +286,16 @@ document.addEventListener('DOMContentLoaded', function() {
 async function loadTimelineData() {
   try {
     const response = await fetch('/assets/json/research_timeline.json');
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
     const data = await response.json();
+    console.log('Timeline data loaded:', data);
     renderTimeline(data);
     setupScrollAnimation();
   } catch (error) {
     console.error('Error loading timeline data:', error);
+    console.log('Using fallback timeline data');
     renderFallbackTimeline();
   }
 }
@@ -435,7 +440,14 @@ function renderFallbackTimeline() {
         description: 'Statistical techniques for astronomy, foundational physics research',
         color: '#3498db',
         icon: 'telescope',
-        publications: []
+        publications: [
+          {
+            title: 'Robust chauvenet outlier rejection',
+            venue: 'Astrophysical Journal Supplement',
+            year: 2018,
+            citations: 21
+          }
+        ]
       },
       {
         period: '2020-2022', 
@@ -443,7 +455,14 @@ function renderFallbackTimeline() {
         description: 'Applying ML techniques to medical imaging, exploring computer vision',
         color: '#e74c3c',
         icon: 'brain',
-        publications: []
+        publications: [
+          {
+            title: 'The intrinsic manifolds of radiological images',
+            venue: 'MICCAI',
+            year: 2022,
+            citations: 16
+          }
+        ]
       },
       {
         period: '2022-Present',
@@ -451,7 +470,14 @@ function renderFallbackTimeline() {
         description: 'Deep learning for medical image analysis, generative models, domain adaptation',
         color: '#2ecc71',
         icon: 'medical',
-        publications: []
+        publications: [
+          {
+            title: 'Intrinsic Dataset Properties and Generalization',
+            venue: 'ICLR',
+            year: 2024,
+            citations: 11
+          }
+        ]
       }
     ]
   };
