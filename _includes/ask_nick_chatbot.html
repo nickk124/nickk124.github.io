@@ -1,0 +1,691 @@
+<!-- Ask Nick Chatbot Interface -->
+<section id="ask-nick-chatbot" class="chatbot-section">
+  <div class="container">
+    <h2 class="section-title">💬 Ask Nick</h2>
+    <p class="section-subtitle">Chat with me about my research, background, and experience in machine learning!</p>
+    
+    <div class="chatbot-container">
+      <div class="chat-window">
+        <div class="chat-header">
+          <div class="chat-avatar">🤖</div>
+          <div class="chat-info">
+            <h4>Nicholas Konz</h4>
+            <span class="status-indicator">● Online</span>
+          </div>
+          <div class="chat-actions">
+            <button id="clear-chat" class="action-btn" title="Clear conversation">🗑️</button>
+            <button id="minimize-chat" class="action-btn" title="Minimize">➖</button>
+          </div>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+          <div class="message bot-message">
+            <div class="message-avatar">🤖</div>
+            <div class="message-content">
+              <div class="message-text">
+                Hi! I'm Nick. I'm excited to chat with you about my research in machine learning and medical imaging. 
+                Feel free to ask me about my work, background, or anything else you're curious about!
+              </div>
+              <div class="message-time">Just now</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="quick-questions">
+          <h5>Quick questions to get started:</h5>
+          <div class="quick-question-buttons">
+            <button class="quick-question" data-question="What is your research about?">🔬 Research Focus</button>
+            <button class="quick-question" data-question="Tell me about your background">👨‍🎓 Background</button>
+            <button class="quick-question" data-question="What advice would you give to students?">💡 Advice</button>
+            <button class="quick-question" data-question="How did you transition from physics to ML?">🔄 Career Path</button>
+          </div>
+        </div>
+        
+        <div class="chat-input-container">
+          <div class="input-group">
+            <input type="text" id="chat-input" placeholder="Type your question here..." maxlength="500">
+            <button id="send-button" class="send-btn">
+              <span class="send-icon">📤</span>
+            </button>
+          </div>
+          <div class="input-footer">
+            <small>Press Enter to send • <span id="char-count">0</span>/500 characters</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.chatbot-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.chatbot-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.chat-window {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.chat-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.chat-avatar {
+  font-size: 2rem;
+  margin-right: 15px;
+}
+
+.chat-info h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.status-indicator {
+  font-size: 0.9rem;
+  color: #4ade80;
+}
+
+.chat-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.chat-messages {
+  height: 400px;
+  overflow-y: auto;
+  padding: 20px;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.message-avatar {
+  font-size: 1.5rem;
+  margin-right: 12px;
+  margin-top: 5px;
+}
+
+.message-content {
+  flex: 1;
+  max-width: 70%;
+}
+
+.message-text {
+  background: white;
+  padding: 15px;
+  border-radius: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.5;
+}
+
+.user-message {
+  flex-direction: row-reverse;
+}
+
+.user-message .message-avatar {
+  margin-left: 12px;
+  margin-right: 0;
+}
+
+.user-message .message-content {
+  text-align: right;
+}
+
+.user-message .message-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.message-time {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: 5px;
+  padding: 0 5px;
+}
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.typing-dots {
+  display: flex;
+  gap: 3px;
+}
+
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  background: #6c757d;
+  border-radius: 50%;
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.typing-dot:nth-child(2) { animation-delay: -0.16s; }
+.typing-dot:nth-child(3) { animation-delay: 0s; }
+
+@keyframes typing {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.quick-questions {
+  padding: 20px;
+  background: #e9ecef;
+  border-top: 1px solid #dee2e6;
+  color: #333;
+}
+
+.quick-questions h5 {
+  margin-bottom: 15px;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.quick-question-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.quick-question {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quick-question:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.chat-input-container {
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #e9ecef;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 25px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+  color: #333;
+}
+
+#chat-input:focus {
+  border-color: #667eea;
+}
+
+.send-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.input-footer {
+  margin-top: 10px;
+  text-align: center;
+  color: #6c757d;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .chatbot-container {
+    margin: 0 20px;
+  }
+  
+  .chat-messages {
+    height: 300px;
+  }
+  
+  .message-content {
+    max-width: 85%;
+  }
+  
+  .quick-question-buttons {
+    flex-direction: column;
+  }
+  
+  .quick-question {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .chat-header {
+    padding: 15px;
+  }
+  
+  .chat-input-container {
+    padding: 15px;
+  }
+}
+
+/* Scroll styling */
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Message animations */
+.message {
+  animation: messageSlideIn 0.3s ease-out;
+}
+
+@keyframes messageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
+<script>
+class AskNickChatbot {
+  constructor() {
+    this.isTyping = false;
+    this.conversationHistory = [];
+    this.responses = this.initializeResponses();
+    
+    this.init();
+  }
+  
+  init() {
+    this.setupEventListeners();
+    this.loadConversationHistory();
+  }
+  
+  initializeResponses() {
+    return {
+      // Research-related responses
+      'research': {
+        keywords: ['research', 'work', 'study', 'focus', 'field'],
+        response: "My research focuses on deep learning for medical image analysis. I work on generative models, domain adaptation, and understanding intrinsic dataset properties that affect generalization. I'm particularly interested in bridging foundational ML concepts with practical medical imaging applications."
+      },
+      
+      'medical imaging': {
+        keywords: ['medical imaging', 'medical image', 'healthcare', 'medical'],
+        response: "Medical imaging is fascinating because it combines complex technical challenges with direct healthcare impact. I work on segmentation, generative models, and domain adaptation to make AI tools more reliable for medical applications. My recent work includes diffusion-based approaches for medical image analysis."
+      },
+      
+      'generative models': {
+        keywords: ['generative', 'gan', 'diffusion', 'synthesis'],
+        response: "Generative models are powerful tools for medical image synthesis, data augmentation, and understanding image distributions. I use them for creating synthetic medical data, improving model robustness, and developing better distance metrics between image distributions."
+      },
+      
+      'domain adaptation': {
+        keywords: ['domain adaptation', 'transfer', 'generalization'],
+        response: "Domain adaptation is crucial in medical imaging where models need to work across different hospitals, scanners, or imaging protocols. I focus on techniques that bridge these domain gaps while maintaining diagnostic accuracy and reducing the need for extensive re-annotation."
+      },
+      
+      'intrinsic properties': {
+        keywords: ['intrinsic', 'dataset properties', 'geometric', 'iclr'],
+        response: "My ICLR 2024 paper explores intrinsic dataset properties - the fundamental geometric and statistical characteristics that influence how neural networks generalize. This work bridges theory and practice, particularly in understanding why models succeed or fail in medical imaging contexts."
+      },
+      
+      // Background-related responses
+      'background': {
+        keywords: ['background', 'about', 'who are you', 'yourself'],
+        response: "I'm a PhD candidate at Duke University working under Maciej Mazurowski. I have an interdisciplinary background starting with physics and mathematics at UNC, where I worked on statistical techniques for astronomy. I transitioned to machine learning and medical imaging, and have also interned at Pacific Northwest National Laboratory."
+      },
+      
+      'physics': {
+        keywords: ['physics', 'astronomy', 'unc', 'math', 'mathematics'],
+        response: "My physics and mathematics background at UNC provided a strong analytical foundation that naturally translated to machine learning. The statistical techniques I used in astronomy research were excellent preparation for understanding data distributions and model behavior in ML."
+      },
+      
+      'transition': {
+        keywords: ['transition', 'career', 'path', 'journey', 'physics to ml'],
+        response: "My transition from physics to ML was driven by the realization that many of the mathematical and statistical tools I was using in astronomy had direct applications in machine learning. The analytical thinking and statistical methods from physics research provided a solid foundation for understanding ML algorithms."
+      },
+      
+      'duke': {
+        keywords: ['duke', 'university', 'phd', 'mazurowski'],
+        response: "At Duke, I work under Maciej Mazurowski in the Department of Electrical and Computer Engineering. Our lab focuses on AI applications in medical imaging, and I've had the opportunity to work on both foundational research and practical applications in healthcare."
+      },
+      
+      'pnnl': {
+        keywords: ['pnnl', 'pacific northwest', 'national lab', 'internship'],
+        response: "At Pacific Northwest National Laboratory, I worked in the Math, Stats, and Data Science Group. This experience gave me valuable exposure to applying statistical methods to scientific problems and showed me the broader applications of ML in scientific research."
+      },
+      
+      // Teaching and mentoring
+      'teaching': {
+        keywords: ['teaching', 'education', 'mentor', 'students'],
+        response: "I'm passionate about teaching and mentoring! I've been involved in educational activities throughout my PhD, including creating tutorials and educational content. I particularly enjoy helping students understand the mathematical foundations behind ML algorithms and their practical applications."
+      },
+      
+      'outreach': {
+        keywords: ['outreach', 'erira', 'community', 'public'],
+        response: "I'm involved in the ERIRA program, which combines research mentoring with radio astronomy outreach. I also write tutorials and educational content, including featured articles on Towards Data Science, to make complex ML concepts more accessible to broader audiences."
+      },
+      
+      'advice': {
+        keywords: ['advice', 'tips', 'students', 'recommendation'],
+        response: "My advice for students is to build strong mathematical foundations, stay curious about interdisciplinary connections, and don't hesitate to bridge different fields. Some of the most interesting research happens at intersections of disciplines. Also, focus on understanding the 'why' behind algorithms, not just the 'how'."
+      },
+      
+      // Future and philosophy
+      'future': {
+        keywords: ['future', 'plans', 'direction', 'next'],
+        response: "I'm excited about continuing to bridge foundational ML research with practical applications, particularly in scientific domains. I want to further explore how geometric and statistical properties of data can inform better model design and evaluation, especially in healthcare applications."
+      },
+      
+      'motivation': {
+        keywords: ['motivation', 'drive', 'inspire', 'why'],
+        response: "I'm motivated by the potential to improve healthcare through better AI tools, and by the intellectual challenge of understanding how learning algorithms really work. I believe in approaching ML scientifically, with rigorous analysis of fundamental principles rather than just empirical improvements."
+      },
+      
+      'publications': {
+        keywords: ['publications', 'papers', 'articles', 'published'],
+        response: "My recent work includes papers on intrinsic dataset properties (ICLR 2024), segmentation diffusion methods (MICCAI 2024), and various other projects in medical imaging. I focus on work that bridges theoretical understanding with practical applications in healthcare."
+      }
+    };
+  }
+  
+  setupEventListeners() {
+    const input = document.getElementById('chat-input');
+    const sendBtn = document.getElementById('send-button');
+    const quickQuestions = document.querySelectorAll('.quick-question');
+    const clearBtn = document.getElementById('clear-chat');
+    const minimizeBtn = document.getElementById('minimize-chat');
+    
+    // Send message events
+    sendBtn.addEventListener('click', () => this.sendMessage());
+    input.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        this.sendMessage();
+      }
+    });
+    
+    // Character counter
+    input.addEventListener('input', (e) => {
+      const charCount = document.getElementById('char-count');
+      charCount.textContent = e.target.value.length;
+    });
+    
+    // Quick questions
+    quickQuestions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const question = btn.dataset.question;
+        input.value = question;
+        this.sendMessage();
+      });
+    });
+    
+    // Chat controls
+    clearBtn.addEventListener('click', () => this.clearChat());
+    minimizeBtn.addEventListener('click', () => this.minimizeChat());
+  }
+  
+  async sendMessage() {
+    const input = document.getElementById('chat-input');
+    const message = input.value.trim();
+    
+    if (!message || this.isTyping) return;
+    
+    this.addMessage(message, 'user');
+    input.value = '';
+    document.getElementById('char-count').textContent = '0';
+    
+    this.addTypingIndicator();
+    
+    // Simulate thinking time
+    await this.delay(1000 + Math.random() * 1000);
+    
+    const response = this.generateResponse(message);
+    this.removeTypingIndicator();
+    this.addMessage(response, 'bot');
+    
+    this.saveConversationHistory();
+  }
+  
+  generateResponse(message) {
+    const lowerMessage = message.toLowerCase();
+    
+    // Check for specific keyword matches
+    for (const [key, responseData] of Object.entries(this.responses)) {
+      if (responseData.keywords.some(keyword => lowerMessage.includes(keyword))) {
+        return responseData.response;
+      }
+    }
+    
+    // Fallback responses based on question type
+    if (lowerMessage.includes('?')) {
+      if (lowerMessage.includes('how')) {
+        return "That's a great question! My approach typically involves combining theoretical understanding with practical applications. Could you be more specific about which aspect you'd like me to elaborate on?";
+      }
+      if (lowerMessage.includes('what')) {
+        return "I'd be happy to explain that! Could you give me a bit more context about what specific aspect you're most interested in learning about?";
+      }
+      if (lowerMessage.includes('why')) {
+        return "That gets to some fundamental questions in my research! The 'why' behind machine learning behavior is exactly what drives my work on intrinsic dataset properties and generalization theory.";
+      }
+    }
+    
+    // Generic responses
+    const genericResponses = [
+      "That's an interesting point! I'd love to discuss my research in machine learning and medical imaging. Could you be more specific about what aspect interests you most?",
+      "Thanks for that question! My work spans from foundational ML theory to practical medical imaging applications. What would you like to know more about?",
+      "I appreciate your curiosity! Feel free to ask me about my research journey, from physics and astronomy to machine learning and medical imaging.",
+      "That's a thoughtful question. I'm passionate about both the theoretical foundations of ML and their practical applications in healthcare. What specific area would you like to explore?"
+    ];
+    
+    return genericResponses[Math.floor(Math.random() * genericResponses.length)];
+  }
+  
+  addMessage(text, sender) {
+    const messagesContainer = document.getElementById('chat-messages');
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `message ${sender}-message`;
+    
+    const avatar = sender === 'user' ? '👤' : '🤖';
+    const time = this.getCurrentTime();
+    
+    messageDiv.innerHTML = `
+      <div class="message-avatar">${avatar}</div>
+      <div class="message-content">
+        <div class="message-text">${text}</div>
+        <div class="message-time">${time}</div>
+      </div>
+    `;
+    
+    messagesContainer.appendChild(messageDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    
+    // Store in conversation history
+    this.conversationHistory.push({
+      text: text,
+      sender: sender,
+      timestamp: Date.now()
+    });
+  }
+  
+  addTypingIndicator() {
+    if (this.isTyping) return;
+    
+    this.isTyping = true;
+    const messagesContainer = document.getElementById('chat-messages');
+    const typingDiv = document.createElement('div');
+    typingDiv.className = 'message bot-message';
+    typingDiv.id = 'typing-indicator';
+    
+    typingDiv.innerHTML = `
+      <div class="message-avatar">🤖</div>
+      <div class="message-content">
+        <div class="message-text typing-indicator">
+          Nick is typing
+          <div class="typing-dots">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    messagesContainer.appendChild(typingDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+  
+  removeTypingIndicator() {
+    this.isTyping = false;
+    const typingIndicator = document.getElementById('typing-indicator');
+    if (typingIndicator) {
+      typingIndicator.remove();
+    }
+  }
+  
+  clearChat() {
+    const messagesContainer = document.getElementById('chat-messages');
+    messagesContainer.innerHTML = `
+      <div class="message bot-message">
+        <div class="message-avatar">🤖</div>
+        <div class="message-content">
+          <div class="message-text">
+            Hi! I'm Nick. I'm excited to chat with you about my research in machine learning and medical imaging. 
+            Feel free to ask me about my work, background, or anything else you're curious about!
+          </div>
+          <div class="message-time">${this.getCurrentTime()}</div>
+        </div>
+      </div>
+    `;
+    
+    this.conversationHistory = [];
+    localStorage.removeItem('nick_chat_history');
+  }
+  
+  minimizeChat() {
+    const chatWindow = document.querySelector('.chat-window');
+    chatWindow.style.transform = chatWindow.style.transform === 'scale(0.8)' ? 'scale(1)' : 'scale(0.8)';
+  }
+  
+  getCurrentTime() {
+    return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  }
+  
+  delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+  saveConversationHistory() {
+    try {
+      localStorage.setItem('nick_chat_history', JSON.stringify(this.conversationHistory.slice(-20))); // Keep last 20 messages
+    } catch (e) {
+      console.log('Could not save conversation history');
+    }
+  }
+  
+  loadConversationHistory() {
+    try {
+      const history = localStorage.getItem('nick_chat_history');
+      if (history) {
+        this.conversationHistory = JSON.parse(history);
+        // Optionally restore recent messages to the UI
+      }
+    } catch (e) {
+      console.log('Could not load conversation history');
+    }
+  }
+}
+
+// Initialize the chatbot when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+  new AskNickChatbot();
+});
+</script>

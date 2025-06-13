@@ -1,0 +1,460 @@
+<!-- Interactive Research Timeline -->
+<section id="research-timeline" class="research-timeline-section">
+  <div class="container">
+    <h2 class="section-title">Research Journey</h2>
+    <p class="section-subtitle">My evolution from physics and astronomy to machine learning and medical imaging</p>
+    
+    <div class="timeline-container">
+      <div class="timeline-line"></div>
+      
+      <!-- Timeline phases will be populated by JavaScript -->
+      <div id="timeline-phases"></div>
+    </div>
+    
+    <!-- Publication details modal -->
+    <div id="publication-modal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="publication-title"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="publication-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.research-timeline-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #3498db, #e74c3c, #2ecc71);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.timeline-phase {
+  position: relative;
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.timeline-phase.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-phase:nth-child(odd) .phase-content {
+  margin-left: 0;
+  margin-right: 60%;
+  text-align: right;
+}
+
+.timeline-phase:nth-child(even) .phase-content {
+  margin-left: 60%;
+  margin-right: 0;
+  text-align: left;
+}
+
+.phase-icon {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border: 4px solid;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  z-index: 10;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.phase-icon:hover {
+  transform: translateX(-50%) scale(1.1);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.phase-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.phase-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.phase-period {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.phase-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #343a40;
+}
+
+.phase-description {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.phase-stats {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.publication-preview {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.publication-preview.expanded {
+  max-height: 300px;
+}
+
+.publication-item {
+  padding: 10px 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.publication-item:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.pub-title {
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 5px;
+}
+
+.pub-meta {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.expand-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.expand-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Color themes for different phases */
+.timeline-phase.phase-physics .phase-icon {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.timeline-phase.phase-physics .phase-content {
+  border-left: 4px solid #3498db;
+}
+
+.timeline-phase.phase-transition .phase-icon {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+.timeline-phase.phase-transition .phase-content {
+  border-left: 4px solid #e74c3c;
+}
+
+.timeline-phase.phase-medical .phase-icon {
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+
+.timeline-phase.phase-medical .phase-content {
+  border-left: 4px solid #2ecc71;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 30px;
+  }
+  
+  .phase-icon {
+    left: 30px;
+  }
+  
+  .timeline-phase:nth-child(odd) .phase-content,
+  .timeline-phase:nth-child(even) .phase-content {
+    margin-left: 80px;
+    margin-right: 0;
+    text-align: left;
+  }
+  
+  .phase-stats {
+    justify-content: space-around;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  loadTimelineData();
+});
+
+async function loadTimelineData() {
+  try {
+    const response = await fetch('/assets/json/research_timeline.json');
+    const data = await response.json();
+    renderTimeline(data);
+    setupScrollAnimation();
+  } catch (error) {
+    console.error('Error loading timeline data:', error);
+    renderFallbackTimeline();
+  }
+}
+
+function renderTimeline(data) {
+  const container = document.getElementById('timeline-phases');
+  
+  data.phases.forEach((phase, index) => {
+    const phaseElement = createPhaseElement(phase, index);
+    container.appendChild(phaseElement);
+  });
+}
+
+function createPhaseElement(phase, index) {
+  const phaseDiv = document.createElement('div');
+  const phaseClasses = ['timeline-phase'];
+  
+  // Add phase-specific classes
+  if (index === 0) phaseClasses.push('phase-physics');
+  else if (index === 1) phaseClasses.push('phase-transition');
+  else phaseClasses.push('phase-medical');
+  
+  phaseDiv.className = phaseClasses.join(' ');
+  
+  const iconSymbol = getPhaseIcon(phase.icon);
+  const publicationCount = phase.publications ? phase.publications.length : 0;
+  const totalCitations = phase.publications ? 
+    phase.publications.reduce((sum, pub) => sum + (pub.citations || 0), 0) : 0;
+  
+  phaseDiv.innerHTML = `
+    <div class="phase-icon" style="border-color: ${phase.color}; color: ${phase.color};">
+      ${iconSymbol}
+    </div>
+    <div class="phase-content">
+      <div class="phase-period">${phase.period}</div>
+      <h3 class="phase-title">${phase.title}</h3>
+      <p class="phase-description">${phase.description}</p>
+      
+      <div class="phase-stats">
+        <div class="stat-item">
+          <div class="stat-number" style="color: ${phase.color};">${publicationCount}</div>
+          <div class="stat-label">Publications</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" style="color: ${phase.color};">${totalCitations}</div>
+          <div class="stat-label">Citations</div>
+        </div>
+      </div>
+      
+      ${publicationCount > 0 ? `
+        <button class="expand-btn" onclick="togglePublications(this)" style="color: ${phase.color};">
+          View Publications ▼
+        </button>
+        <div class="publication-preview">
+          ${phase.publications.map(pub => `
+            <div class="publication-item" onclick="showPublicationDetails('${escapeHtml(JSON.stringify(pub))}')">
+              <div class="pub-title">${pub.title}</div>
+              <div class="pub-meta">${pub.venue} • ${pub.year} • ${pub.citations || 0} citations</div>
+            </div>
+          `).join('')}
+        </div>
+      ` : ''}
+    </div>
+  `;
+  
+  return phaseDiv;
+}
+
+function getPhaseIcon(iconType) {
+  const icons = {
+    'telescope': '🔭',
+    'brain': '🧠',
+    'medical': '🏥',
+    'default': '🔬'
+  };
+  return icons[iconType] || icons.default;
+}
+
+function togglePublications(button) {
+  const preview = button.nextElementSibling;
+  const isExpanded = preview.classList.contains('expanded');
+  
+  if (isExpanded) {
+    preview.classList.remove('expanded');
+    button.innerHTML = button.innerHTML.replace('▲', '▼');
+  } else {
+    preview.classList.add('expanded');
+    button.innerHTML = button.innerHTML.replace('▼', '▲');
+  }
+}
+
+function showPublicationDetails(pubDataStr) {
+  try {
+    const pub = JSON.parse(pubDataStr);
+    document.getElementById('publication-title').textContent = pub.title;
+    document.getElementById('publication-body').innerHTML = `
+      <p><strong>Authors:</strong> ${pub.authors}</p>
+      <p><strong>Venue:</strong> ${pub.venue}</p>
+      <p><strong>Year:</strong> ${pub.year}</p>
+      <p><strong>Citations:</strong> ${pub.citations || 0}</p>
+      ${pub.link ? `<p><a href="${pub.link}" target="_blank" class="btn btn-primary">View Publication</a></p>` : ''}
+    `;
+    $('#publication-modal').modal('show');
+  } catch (error) {
+    console.error('Error showing publication details:', error);
+  }
+}
+
+function setupScrollAnimation() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+  
+  document.querySelectorAll('.timeline-phase').forEach(phase => {
+    observer.observe(phase);
+  });
+}
+
+function escapeHtml(unsafe) {
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function renderFallbackTimeline() {
+  // Fallback timeline in case JSON fails to load
+  const fallbackData = {
+    phases: [
+      {
+        period: '2018-2020',
+        title: 'Physics & Astronomy Foundation',
+        description: 'Statistical techniques for astronomy, foundational physics research',
+        color: '#3498db',
+        icon: 'telescope',
+        publications: []
+      },
+      {
+        period: '2020-2022', 
+        title: 'Transition to Machine Learning',
+        description: 'Applying ML techniques to medical imaging, exploring computer vision',
+        color: '#e74c3c',
+        icon: 'brain',
+        publications: []
+      },
+      {
+        period: '2022-Present',
+        title: 'Medical Imaging Specialization', 
+        description: 'Deep learning for medical image analysis, generative models, domain adaptation',
+        color: '#2ecc71',
+        icon: 'medical',
+        publications: []
+      }
+    ]
+  };
+  renderTimeline(fallbackData);
+}
+</script>

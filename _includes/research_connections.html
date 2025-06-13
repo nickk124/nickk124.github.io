@@ -1,0 +1,590 @@
+<!-- Animated Research Connections -->
+<section id="research-connections" class="research-connections-section">
+  <div class="container">
+    <h2 class="section-title">Research Connections</h2>
+    <p class="section-subtitle">Explore how different areas of my research interconnect and influence each other</p>
+    
+    <div class="connections-container">
+      <div id="connections-viz" class="connections-visualization"></div>
+      
+      <div class="connections-controls">
+        <button id="play-animation" class="control-btn">
+          <span class="btn-icon">▶️</span> Play Animation
+        </button>
+        <button id="reset-animation" class="control-btn">
+          <span class="btn-icon">🔄</span> Reset
+        </button>
+        <button id="toggle-labels" class="control-btn">
+          <span class="btn-icon">🏷️</span> Toggle Labels
+        </button>
+      </div>
+      
+      <div class="connection-info" id="connection-info">
+        <h4>Research Area Details</h4>
+        <p>Hover over a node to see detailed information about that research area.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.research-connections-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: white;
+  overflow: hidden;
+}
+
+.connections-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.connections-visualization {
+  width: 100%;
+  height: 600px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.connections-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.control-btn {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.control-btn:active {
+  transform: translateY(0);
+}
+
+.connection-info {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 120px;
+}
+
+.connection-info h4 {
+  margin-bottom: 10px;
+  color: #f8f9fa;
+}
+
+.connection-info p {
+  color: #e9ecef;
+  line-height: 1.6;
+}
+
+/* Node styles */
+.research-node {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+}
+
+.research-node:hover {
+  transform: scale(1.2);
+  z-index: 20;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.research-node.active {
+  transform: scale(1.3);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+}
+
+.node-label {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 11px;
+  white-space: nowrap;
+  margin-top: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.research-node:hover .node-label {
+  opacity: 1;
+}
+
+.node-label.always-visible {
+  opacity: 1;
+}
+
+/* Connection lines */
+.connection-line {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.6) 50%, transparent 100%);
+  transform-origin: left center;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.connection-line.active {
+  opacity: 1;
+  animation: pulse-line 2s infinite;
+}
+
+@keyframes pulse-line {
+  0%, 100% { 
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.6) 50%, transparent 100%);
+  }
+  50% { 
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.9) 50%, transparent 100%);
+  }
+}
+
+/* Particle effects */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.particle.moving {
+  opacity: 1;
+  animation: move-particle 3s linear infinite;
+}
+
+@keyframes move-particle {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .connections-visualization {
+    height: 400px;
+  }
+  
+  .research-node {
+    width: 60px;
+    height: 60px;
+    font-size: 10px;
+  }
+  
+  .connections-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .control-btn {
+    width: 200px;
+    justify-content: center;
+  }
+}
+</style>
+
+<script>
+class ResearchConnectionsViz {
+  constructor() {
+    this.container = document.getElementById('connections-viz');
+    this.nodes = [];
+    this.connections = [];
+    this.animationId = null;
+    this.isAnimating = false;
+    this.showLabels = false;
+    this.particles = [];
+    
+    this.init();
+  }
+  
+  async init() {
+    try {
+      const response = await fetch('/assets/json/research_connections.json');
+      const data = await response.json();
+      this.nodes = data.nodes;
+      this.connections = data.links;
+    } catch (error) {
+      console.error('Error loading connections data:', error);
+      this.loadFallbackData();
+    }
+    
+    this.setupEventListeners();
+    this.renderVisualization();
+  }
+  
+  loadFallbackData() {
+    this.nodes = [
+      { id: 'physics', label: 'Physics', category: 'foundation', color: '#3498db' },
+      { id: 'astronomy', label: 'Astronomy', category: 'foundation', color: '#3498db' },
+      { id: 'statistics', label: 'Statistics', category: 'methods', color: '#f39c12' },
+      { id: 'machine_learning', label: 'Machine Learning', category: 'core', color: '#e74c3c' },
+      { id: 'computer_vision', label: 'Computer Vision', category: 'core', color: '#e74c3c' },
+      { id: 'medical_imaging', label: 'Medical Imaging', category: 'application', color: '#2ecc71' },
+      { id: 'generative_models', label: 'Generative Models', category: 'technique', color: '#9b59b6' },
+      { id: 'domain_adaptation', label: 'Domain Adaptation', category: 'technique', color: '#9b59b6' },
+      { id: 'deep_learning', label: 'Deep Learning', category: 'core', color: '#e74c3c' }
+    ];
+    
+    this.connections = [
+      { source: 'physics', target: 'statistics', strength: 0.8 },
+      { source: 'astronomy', target: 'statistics', strength: 0.7 },
+      { source: 'statistics', target: 'machine_learning', strength: 0.9 },
+      { source: 'machine_learning', target: 'computer_vision', strength: 0.8 },
+      { source: 'computer_vision', target: 'medical_imaging', strength: 0.9 },
+      { source: 'machine_learning', target: 'deep_learning', strength: 0.9 },
+      { source: 'deep_learning', target: 'generative_models', strength: 0.8 },
+      { source: 'deep_learning', target: 'domain_adaptation', strength: 0.7 },
+      { source: 'domain_adaptation', target: 'medical_imaging', strength: 0.8 },
+      { source: 'generative_models', target: 'medical_imaging', strength: 0.7 }
+    ];
+  }
+  
+  setupEventListeners() {
+    document.getElementById('play-animation').addEventListener('click', () => {
+      this.toggleAnimation();
+    });
+    
+    document.getElementById('reset-animation').addEventListener('click', () => {
+      this.resetAnimation();
+    });
+    
+    document.getElementById('toggle-labels').addEventListener('click', () => {
+      this.toggleLabels();
+    });
+    
+    window.addEventListener('resize', () => {
+      this.renderVisualization();
+    });
+  }
+  
+  renderVisualization() {
+    this.container.innerHTML = '';
+    
+    const containerRect = this.container.getBoundingClientRect();
+    const width = containerRect.width;
+    const height = containerRect.height;
+    
+    // Position nodes in a circular layout with some randomness
+    const centerX = width / 2;
+    const centerY = height / 2;
+    const radius = Math.min(width, height) * 0.3;
+    
+    this.nodes.forEach((node, index) => {
+      const angle = (index / this.nodes.length) * 2 * Math.PI;
+      const x = centerX + radius * Math.cos(angle) + (Math.random() - 0.5) * 80;
+      const y = centerY + radius * Math.sin(angle) + (Math.random() - 0.5) * 80;
+      
+      node.x = Math.max(40, Math.min(width - 40, x));
+      node.y = Math.max(40, Math.min(height - 40, y));
+      
+      this.createNodeElement(node);
+    });
+    
+    // Create connection lines
+    this.connections.forEach(connection => {
+      this.createConnectionLine(connection);
+    });
+  }
+  
+  createNodeElement(node) {
+    const nodeEl = document.createElement('div');
+    nodeEl.className = 'research-node';
+    nodeEl.id = `node-${node.id}`;
+    nodeEl.style.left = `${node.x - 40}px`;
+    nodeEl.style.top = `${node.y - 40}px`;
+    nodeEl.style.background = `linear-gradient(135deg, ${node.color}, ${this.darkenColor(node.color, 0.2)})`;
+    nodeEl.innerHTML = `
+      <span>${node.label.replace(' ', '<br>')}</span>
+      <div class="node-label ${this.showLabels ? 'always-visible' : ''}">${node.label}</div>
+    `;
+    
+    nodeEl.addEventListener('mouseenter', () => {
+      this.highlightNode(node);
+    });
+    
+    nodeEl.addEventListener('mouseleave', () => {
+      this.unhighlightNode(node);
+    });
+    
+    this.container.appendChild(nodeEl);
+  }
+  
+  createConnectionLine(connection) {
+    const sourceNode = this.nodes.find(n => n.id === connection.source);
+    const targetNode = this.nodes.find(n => n.id === connection.target);
+    
+    if (!sourceNode || !targetNode) return;
+    
+    const line = document.createElement('div');
+    line.className = 'connection-line';
+    line.id = `line-${connection.source}-${connection.target}`;
+    
+    const dx = targetNode.x - sourceNode.x;
+    const dy = targetNode.y - sourceNode.y;
+    const length = Math.sqrt(dx * dx + dy * dy);
+    const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+    
+    line.style.left = `${sourceNode.x}px`;
+    line.style.top = `${sourceNode.y}px`;
+    line.style.width = `${length}px`;
+    line.style.transform = `rotate(${angle}deg)`;
+    line.style.opacity = connection.strength;
+    
+    this.container.appendChild(line);
+  }
+  
+  highlightNode(node) {
+    const nodeEl = document.getElementById(`node-${node.id}`);
+    nodeEl.classList.add('active');
+    
+    // Highlight connected nodes and lines
+    this.connections.forEach(connection => {
+      if (connection.source === node.id || connection.target === node.id) {
+        const line = document.getElementById(`line-${connection.source}-${connection.target}`);
+        if (line) line.classList.add('active');
+        
+        const connectedNodeId = connection.source === node.id ? connection.target : connection.source;
+        const connectedNodeEl = document.getElementById(`node-${connectedNodeId}`);
+        if (connectedNodeEl) connectedNodeEl.style.opacity = '1';
+      }
+    });
+    
+    // Update info panel
+    this.updateInfoPanel(node);
+  }
+  
+  unhighlightNode(node) {
+    const nodeEl = document.getElementById(`node-${node.id}`);
+    nodeEl.classList.remove('active');
+    
+    // Remove highlights
+    this.connections.forEach(connection => {
+      if (connection.source === node.id || connection.target === node.id) {
+        const line = document.getElementById(`line-${connection.source}-${connection.target}`);
+        if (line) line.classList.remove('active');
+        
+        const connectedNodeId = connection.source === node.id ? connection.target : connection.source;
+        const connectedNodeEl = document.getElementById(`node-${connectedNodeId}`);
+        if (connectedNodeEl) connectedNodeEl.style.opacity = '';
+      }
+    });
+    
+    // Reset info panel
+    this.resetInfoPanel();
+  }
+  
+  updateInfoPanel(node) {
+    const infoPanel = document.getElementById('connection-info');
+    const descriptions = {
+      'physics': 'Foundation in physics provides the mathematical and analytical framework for understanding complex systems.',
+      'astronomy': 'Astronomical research developed skills in statistical analysis and data processing for large-scale datasets.',
+      'statistics': 'Statistical methods bridge the gap between physical sciences and machine learning approaches.',
+      'machine_learning': 'Core machine learning techniques form the backbone of modern AI applications.',
+      'computer_vision': 'Computer vision specialization focuses on extracting meaningful information from images.',
+      'medical_imaging': 'Application of ML techniques to medical imaging for diagnostic and therapeutic purposes.',
+      'generative_models': 'Generative models create new data samples and enable advanced image synthesis.',
+      'domain_adaptation': 'Domain adaptation techniques ensure models work across different data distributions.',
+      'deep_learning': 'Deep learning provides the computational framework for complex pattern recognition.'
+    };
+    
+    infoPanel.innerHTML = `
+      <h4>${node.label}</h4>
+      <p><strong>Category:</strong> ${node.category.charAt(0).toUpperCase() + node.category.slice(1)}</p>
+      <p>${descriptions[node.id] || 'Key research area in my academic journey.'}</p>
+    `;
+  }
+  
+  resetInfoPanel() {
+    const infoPanel = document.getElementById('connection-info');
+    infoPanel.innerHTML = `
+      <h4>Research Area Details</h4>
+      <p>Hover over a node to see detailed information about that research area.</p>
+    `;
+  }
+  
+  toggleAnimation() {
+    const button = document.getElementById('play-animation');
+    
+    if (this.isAnimating) {
+      this.stopAnimation();
+      button.innerHTML = '<span class="btn-icon">▶️</span> Play Animation';
+    } else {
+      this.startAnimation();
+      button.innerHTML = '<span class="btn-icon">⏸️</span> Pause Animation';
+    }
+  }
+  
+  startAnimation() {
+    this.isAnimating = true;
+    this.animateConnections();
+  }
+  
+  stopAnimation() {
+    this.isAnimating = false;
+    if (this.animationId) {
+      cancelAnimationFrame(this.animationId);
+    }
+    this.clearParticles();
+  }
+  
+  animateConnections() {
+    if (!this.isAnimating) return;
+    
+    // Create particles along connection lines
+    this.connections.forEach((connection, index) => {
+      setTimeout(() => {
+        if (this.isAnimating) {
+          this.createMovingParticle(connection);
+        }
+      }, index * 500);
+    });
+    
+    this.animationId = requestAnimationFrame(() => {
+      setTimeout(() => {
+        this.animateConnections();
+      }, 3000);
+    });
+  }
+  
+  createMovingParticle(connection) {
+    const sourceNode = this.nodes.find(n => n.id === connection.source);
+    const targetNode = this.nodes.find(n => n.id === connection.target);
+    
+    if (!sourceNode || !targetNode) return;
+    
+    const particle = document.createElement('div');
+    particle.className = 'particle moving';
+    particle.style.left = `${sourceNode.x}px`;
+    particle.style.top = `${sourceNode.y}px`;
+    
+    this.container.appendChild(particle);
+    
+    // Animate particle movement
+    const dx = targetNode.x - sourceNode.x;
+    const dy = targetNode.y - sourceNode.y;
+    
+    particle.animate([
+      { transform: `translate(0, 0)` },
+      { transform: `translate(${dx}px, ${dy}px)` }
+    ], {
+      duration: 2000,
+      easing: 'ease-in-out'
+    }).onfinish = () => {
+      particle.remove();
+    };
+  }
+  
+  clearParticles() {
+    const particles = this.container.querySelectorAll('.particle');
+    particles.forEach(particle => particle.remove());
+  }
+  
+  resetAnimation() {
+    this.stopAnimation();
+    this.clearParticles();
+    
+    // Reset all visual states
+    const nodes = this.container.querySelectorAll('.research-node');
+    nodes.forEach(node => {
+      node.classList.remove('active');
+      node.style.opacity = '';
+    });
+    
+    const lines = this.container.querySelectorAll('.connection-line');
+    lines.forEach(line => {
+      line.classList.remove('active');
+    });
+    
+    this.resetInfoPanel();
+  }
+  
+  toggleLabels() {
+    this.showLabels = !this.showLabels;
+    const labels = this.container.querySelectorAll('.node-label');
+    labels.forEach(label => {
+      if (this.showLabels) {
+        label.classList.add('always-visible');
+      } else {
+        label.classList.remove('always-visible');
+      }
+    });
+    
+    const button = document.getElementById('toggle-labels');
+    button.innerHTML = `<span class="btn-icon">🏷️</span> ${this.showLabels ? 'Hide' : 'Show'} Labels`;
+  }
+  
+  darkenColor(color, amount) {
+    const num = parseInt(color.replace('#', ''), 16);
+    const amt = Math.round(2.55 * amount * 100);
+    const R = (num >> 16) - amt;
+    const G = (num >> 8 & 0x00FF) - amt;
+    const B = (num & 0x0000FF) - amt;
+    return '#' + (0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 +
+      (G < 255 ? G < 1 ? 0 : G : 255) * 0x100 +
+      (B < 255 ? B < 1 ? 0 : B : 255)).toString(16).slice(1);
+  }
+}
+
+// Initialize the visualization when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+  new ResearchConnectionsViz();
+});
+</script>
