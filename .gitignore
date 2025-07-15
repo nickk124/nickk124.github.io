@@ -9,3 +9,4 @@ _site
 Gemfile.lock
 vendor
 
+.claude/settings.local.json
