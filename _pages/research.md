@@ -35,10 +35,8 @@ My work spans several interconnected areas in machine learning for medical imagi
 - Pluralistic image completion for anomaly detection
 - Clinical applications in breast imaging and other domains
 
----
-
-## Selected Publications
-
+### Test
 <div class="publications">
-{% bibliography -f {{ site.scholar.bibliography }} --query @*[selected=true]* %}
+{% bibliography -f {{ site.scholar.bibliography }} --query @*[intrinsicproperties=true]* %}
 </div>
+---
