@@ -46,16 +46,16 @@ Description...
 </div>
 ---
 
+### Misc. Breast Imaging Analysis
+Description...
+<div class="publications">
+{% bibliography -f {{ site.scholar.bibliography }} --query @*[breastimaging=true]* %}
+</div>
+---
+
 ### Anomaly Detection and Localization
 Description...
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[anomalydetection=true]* %}
 </div>
 ---
-
-Uncat:
-
-Misc. breast imaging analysis
-konz2023competition
-chen2025guidedmorph
-zhang2022lightweight
