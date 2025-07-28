@@ -9,8 +9,8 @@ nav_order: 2
 
 My research topics of interest, past and present.
 
-## Table of Contents
-- [Table of Contents](#table-of-contents)
+## Topic List
+- [Topic List](#topic-list)
   - [Intrinsic Dataset Properties/Statistics and Neural Network Generalization Ability](#intrinsic-dataset-propertiesstatistics-and-neural-network-generalization-ability)
   - [Image Distribution Similarity Metrics and Generative Models](#image-distribution-similarity-metrics-and-generative-models)
   - [Neural Network Interpretability and Explainability](#neural-network-interpretability-and-explainability)
