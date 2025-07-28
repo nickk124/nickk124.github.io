@@ -11,19 +11,20 @@ My research topics of interest, past and present.
 
 ## Table of Contents
 
-- [Intrinsic Dataset Properties/Statistics and Neural Network Generalization Ability](#intrinsic-dataset-propertiesstatistics-and-neural-network-generalization-ability)
-- [Image Distribution Similarity Metrics and Generative Models](#image-distribution-similarity-metrics-and-generative-models)
-- [Neural Network Interpretability and Explainability](#neural-network-interpretability-and-explainability)
-- [Vision Foundation Models for Segmentation and Beyond](#vision-foundation-models-for-segmentation-and-beyond)
-- [Domain Adaptation and Analysis](#domain-adaptation-and-analysis)
-- [Misc. Breast Imaging Analysis](#misc-breast-imaging-analysis)
-- [Anomaly Detection and Localization](#anomaly-detection-and-localization)
+- [Table of Contents](#table-of-contents)
+  - [Intrinsic Dataset Properties/Statistics and Neural Network Generalization Ability](#intrinsic-dataset-propertiesstatistics-and-neural-network-generalization-ability)
+  - [Image Distribution Similarity Metrics and Generative Models](#image-distribution-similarity-metrics-and-generative-models)
+  - [Neural Network Interpretability and Explainability](#neural-network-interpretability-and-explainability)
+  - [Vision Foundation Models for Segmentation and Beyond](#vision-foundation-models-for-segmentation-and-beyond)
+  - [Domain Adaptation and Analysis](#domain-adaptation-and-analysis)
+  - [Anomaly Detection and Localization](#anomaly-detection-and-localization)
+  - [Misc. Breast Imaging Analysis](#misc-breast-imaging-analysis)
 
 ---
 
 ### Intrinsic Dataset Properties/Statistics and Neural Network Generalization Ability 
 
-Research exploring how geometric and statistical properties of datasets, such as intrinsic dimension and label complexity, influence neural network generalization across different imaging domains, particularly comparing natural and medical images.
+Research exploring how geometric and statistical properties of datasets, such as intrinsic dimension and label sharpness, influence neural network generalization across different imaging domains, particularly in how these differ betweeen natural and medical image models.
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[intrinsicproperties=true]* %}
@@ -43,7 +44,7 @@ Development of novel perceptual metrics and generative models for medical imagin
 
 ### Neural Network Interpretability and Explainability
 
-Methods for understanding what neural networks learn and how concepts are formed, including data attribution techniques and representation analysis to improve model transparency and trustworthiness.
+Methods for understanding what neural networks learn and how concepts are formed, including data attribution techniques and representation analysis to improve model transparency and trustworthiness, and others.
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[interpretability=true]* %}
@@ -53,7 +54,7 @@ Methods for understanding what neural networks learn and how concepts are formed
 
 ### Vision Foundation Models for Segmentation and Beyond
 
-Investigation of the capabilities and limitations of large-scale foundation models like SAM and SAM 2 for medical image analysis, including enhanced architectures and performance evaluation across diverse clinical tasks.
+Investigation of the capabilities and limitations of large-scale foundation models for medical image analysis, including enhanced architectures and performance evaluation across diverse downstream tasks.
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[foundationmodels=true]* %}
@@ -63,20 +64,10 @@ Investigation of the capabilities and limitations of large-scale foundation mode
 
 ### Domain Adaptation and Analysis
 
-Techniques for adapting models across different imaging domains, scanners, and acquisition parameters, addressing the challenge of domain shift that commonly affects medical AI systems in practice.
+Techniques for adapting models across different imaging domains, scanners, and acquisition parameters, addressing the challenge of domain shift that commonly affects medical AI systems in practice, as well as understanding the nature of the domain shift problem itself.
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[domainadaptation=true]* %}
-</div>
-
----
-
-### Misc. Breast Imaging Analysis
-
-Specialized methods for breast imaging applications, including lesion detection algorithms, registration techniques, and style transfer methods tailored to the unique challenges of breast MRI and tomosynthesis.
-
-<div class="publications">
-{% bibliography -f {{ site.scholar.bibliography }} --query @*[breastimaging=true]* %}
 </div>
 
 ---
@@ -88,3 +79,13 @@ Unsupervised and self-supervised approaches for detecting abnormalities in medic
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[anomalydetection=true]* %}
 </div>
+
+### Misc. Breast Imaging Analysis
+
+Specialized methods for breast imaging applications, including lesion detection algorithms, registration techniques, and style transfer methods tailored to the unique challenges of breast MRI and tomosynthesis.
+
+<div class="publications">
+{% bibliography -f {{ site.scholar.bibliography }} --query @*[breastimaging=true]* %}
+</div>
+
+---
