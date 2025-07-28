@@ -4,7 +4,7 @@ permalink: /outreach/
 title: Outreach
 description:
 nav: true
-nav_order: 3
+nav_order: 4
 ---
 
 ## ERIRA (Educational Research in Radio Astronomy)
