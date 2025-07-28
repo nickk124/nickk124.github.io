@@ -19,7 +19,7 @@
 }
 
 @article{zhang2024quantifying,
-  title={Quantifying the Limits of Segment Anything Model: Analyzing Challenges in Segmenting Tree-Like and Low-Contrast Structures},
+  title={Quantifying the Limits of Segmentation Foundation Models: Modeling Challenges in Segmenting Tree-Like and Low-Contrast Objects},
   author={Zhang*, Yixin and Konz*, Nicholas and Kramer, Kevin and Mazurowski, Maciej A.},
   journal={arXiv preprint},
   year={2024},
@@ -28,7 +28,7 @@
   bibtex_show = true,
   preview={samfailure.png},
   code={https://github.com/mazurowski-lab/SAM-TexturalConfusion-Metrics},
-  abstract={Segment Anything Model (SAM) has shown impressive performance in interactive and zero-shot segmentation across diverse domains, suggesting that they have learned a general concept of "objects" from their large-scale training. However, we observed that SAM struggles with certain types of objects, particularly those featuring dense, tree-like structures and low textural contrast from their surroundings. These failure modes are critical for understanding its limitations in real-world use. In order to systematically examine this issue, we propose metrics to quantify two key object characteristics: tree-likeness and textural separability. Through extensive controlled synthetic experiments and testing on real datasets, we demonstrate that SAM's performance is noticeably correlated with these factors. We link these behaviors under the concept of "textural confusion", where SAM misinterprets local structure as global texture, leading to over-segmentation, or struggles to differentiate objects from similarly textured backgrounds. These findings offer the first quantitative framework to model SAM's challenges, providing valuable insights into its limitations and guiding future improvements for vision foundation models.},
+  abstract={Image segmentation foundation models (SFMs) like Segment Anything Model (SAM) have achieved impressive zero-shot and interactive segmentation across diverse domains. However, they struggle to segment objects with certain structures, particularly those with dense, tree-like morphology and low textural contrast from their surroundings. These failure modes are crucial for understanding the limitations of SFMs in real-world applications. To systematically study this issue, we introduce interpretable metrics quantifying object tree-likeness and textural separability. On carefully controlled synthetic experiments and real-world datasets, we show that SFM performance (e.g., SAM, SAM 2, HQ-SAM) noticeably correlates with these factors. We link these failures to "textural confusion", where models misinterpret local structure as global texture, causing over-segmentation or difficulty distinguishing objects from similar backgrounds. Notably, targeted fine-tuning fails to resolve this issue, indicating a fundamental limitation. Our study provides the first quantitative framework for modeling the behavior of SFMs on challenging structures, offering interpretable insights into their segmentation capabilities. },
   foundationmodels={true}
 }
 
