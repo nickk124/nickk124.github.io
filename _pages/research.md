@@ -23,7 +23,7 @@ My research topics of interest, past and present.
 
 ### Intrinsic Dataset Properties/Statistics and Neural Network Generalization Ability 
 
-I study how geometric and statistical properties of datasets, such as intrinsic dimension and label complexity, influence neural network generalization across different imaging domains, particularly comparing natural and medical images.
+Research exploring how geometric and statistical properties of datasets, such as intrinsic dimension and label complexity, influence neural network generalization across different imaging domains, particularly comparing natural and medical images.
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[intrinsicproperties=true]* %}
@@ -33,7 +33,7 @@ I study how geometric and statistical properties of datasets, such as intrinsic 
 
 ### Image Distribution Similarity Metrics and Generative Models
 
-I develop novel perceptual metrics and generative models for medical imaging, including controllable image generation methods and specialized distance measures that better capture anatomical features than traditional computer vision metrics.
+Development of novel perceptual metrics and generative models for medical imaging, including controllable image generation methods and specialized distance measures that better capture anatomical features than traditional computer vision metrics.
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[generativemodels=true]* %}
@@ -43,7 +43,7 @@ I develop novel perceptual metrics and generative models for medical imaging, in
 
 ### Neural Network Interpretability and Explainability
 
-I explore methods for understanding what neural networks learn and how concepts are formed, including data attribution techniques and representation analysis to improve model transparency and trustworthiness.
+Methods for understanding what neural networks learn and how concepts are formed, including data attribution techniques and representation analysis to improve model transparency and trustworthiness.
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[interpretability=true]* %}
@@ -53,7 +53,7 @@ I explore methods for understanding what neural networks learn and how concepts 
 
 ### Vision Foundation Models for Segmentation and Beyond
 
-I investigate the capabilities and limitations of large-scale foundation models like SAM and SAM 2 for medical image analysis, developing enhanced architectures and evaluating their performance across diverse clinical tasks.
+Investigation of the capabilities and limitations of large-scale foundation models like SAM and SAM 2 for medical image analysis, including enhanced architectures and performance evaluation across diverse clinical tasks.
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[foundationmodels=true]* %}
@@ -63,7 +63,7 @@ I investigate the capabilities and limitations of large-scale foundation models 
 
 ### Domain Adaptation and Analysis
 
-I work on techniques for adapting models across different imaging domains, scanners, and acquisition parameters, addressing the challenge of domain shift that commonly affects medical AI systems in practice.
+Techniques for adapting models across different imaging domains, scanners, and acquisition parameters, addressing the challenge of domain shift that commonly affects medical AI systems in practice.
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[domainadaptation=true]* %}
@@ -73,7 +73,7 @@ I work on techniques for adapting models across different imaging domains, scann
 
 ### Misc. Breast Imaging Analysis
 
-I develop specialized methods for breast imaging applications, including lesion detection algorithms, registration techniques, and style transfer methods tailored to the unique challenges of breast MRI and tomosynthesis.
+Specialized methods for breast imaging applications, including lesion detection algorithms, registration techniques, and style transfer methods tailored to the unique challenges of breast MRI and tomosynthesis.
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[breastimaging=true]* %}
@@ -83,7 +83,7 @@ I develop specialized methods for breast imaging applications, including lesion 
 
 ### Anomaly Detection and Localization
 
-I create unsupervised and self-supervised approaches for detecting abnormalities in medical images, with applications ranging from breast cancer screening to general outlier detection in high-resolution imaging data.
+Unsupervised and self-supervised approaches for detecting abnormalities in medical images, with applications ranging from breast cancer screening to general outlier detection in high-resolution imaging data.
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[anomalydetection=true]* %}
