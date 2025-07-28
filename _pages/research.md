@@ -35,7 +35,7 @@ Description...
 ### Vision Foundation Models for Segmentation and Beyond
 Description...
 <div class="publications">
-{% bibliography -f {{ site.scholar.bibliography }} --query @*[segmentationfoundationmodels=true]* %}
+{% bibliography -f {{ site.scholar.bibliography }} --query @*[foundationmodels=true]* %}
 </div>
 ---
 
@@ -58,4 +58,3 @@ Description...
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[anomalydetection=true]* %}
 </div>
----
