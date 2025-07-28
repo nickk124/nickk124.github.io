@@ -11,55 +11,33 @@ My research focuses on deep learning for medical image analysis on a spectrum fr
 
 ---
 
-## Medical Image Generation & Translation
+## Research Areas
 
-I work on developing generative models for medical imaging applications, with a focus on controllable image generation and cross-domain translation.
+My work spans several interconnected areas in machine learning for medical imaging:
 
-### Selected Recent Papers
+### Medical Image Generation & Translation
+- Anatomically-controllable image generation using diffusion models
+- Cross-domain medical image translation and evaluation metrics
+- Segmentation-guided generative models
 
-<div class="publications">
-{% bibliography -f {{ site.scholar.bibliography }} --query @*[selected=true]* --query @*[title~=*generation*]* --query @*[title~=*translation*]* --query @*[title~=*diffusion*]* --query @*[title~=*segmentation-guided*]* %}
-</div>
+### Foundational Deep Learning & Generalization  
+- Intrinsic properties of medical vs. natural image datasets
+- Generalization scaling laws and representation learning
+- Domain adaptation challenges in specialized imaging domains
 
----
+### Evaluation Metrics & Model Assessment
+- Novel perceptual metrics for medical image evaluation (e.g., Fréchet Radiomic Distance)
+- Framework development for assessing generative models
+- Correlation studies between metrics and downstream task performance
 
-## Foundational Deep Learning & Generalization
-
-Research into how fundamental deep learning principles apply to specialized domains, particularly exploring intrinsic properties of datasets and their impact on model behavior.
-
-### Selected Recent Papers
-
-<div class="publications">
-{% bibliography -f {{ site.scholar.bibliography }} --query @*[selected=true]* --query @*[title~=*intrinsic*]* --query @*[title~=*generalization*]* --query @*[title~=*properties*]* %}
-</div>
-
----
-
-## Evaluation Metrics & Model Assessment
-
-Development of novel metrics and frameworks for evaluating deep learning models in medical imaging contexts.
-
-### Selected Recent Papers
-
-<div class="publications">
-{% bibliography -f {{ site.scholar.bibliography }} --query @*[selected=true]* --query @*[title~=*metric*]* --query @*[title~=*distance*]* --query @*[title~=*FRD*]* --query @*[title~=*evaluation*]* %}
-</div>
+### Anomaly Detection & Medical Applications
+- Unsupervised anomaly localization in medical images
+- Pluralistic image completion for anomaly detection
+- Clinical applications in breast imaging and other domains
 
 ---
 
-## Anomaly Detection & Medical Applications
-
-Application-oriented work focusing on anomaly detection in medical images and specific clinical applications.
-
-### Selected Recent Papers
-
-<div class="publications">
-{% bibliography -f {{ site.scholar.bibliography }} --query @*[selected=true]* --query @*[title~=*anomaly*]* --query @*[title~=*breast*]* --query @*[title~=*detection*]* --query @*[title~=*completion*]* %}
-</div>
-
----
-
-## All Selected Publications
+## Selected Publications
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[selected=true]* %}
