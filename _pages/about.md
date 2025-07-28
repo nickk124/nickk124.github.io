@@ -25,3 +25,5 @@ I am also particularly interested in how foundational deep learning concepts--su
 Beyond medical imaging, I'm drawn to the intersection of machine learning and science: understanding deep learning through a scientific lens, and leveraging it for scientific modeling, discovery, and applications in science-adjacent domains.
 
 Previously, I worked as a research intern in the Math, Stats, and Data Science Group at [PNNL](https://www.pnnl.gov/). I earned my undergraduate degree at UNC, double-majoring in physics and mathematics, where I conducted research on statistical techniques for astronomy.
+
+To learn more about my research, check out my [full list of research topics and papers](/research/).
