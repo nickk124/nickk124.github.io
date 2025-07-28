@@ -13,8 +13,8 @@ My research topics of interest, past and present.
 - [Topic List](#topic-list)
   - [Intrinsic Properties and Statistics of Training Data and their Effects on Neural Network Generalization Ability](#intrinsic-properties-and-statistics-of-training-data-and-their-effects-on-neural-network-generalization-ability)
   - [Image Distribution Similarity Metrics and Generative Models](#image-distribution-similarity-metrics-and-generative-models)
-  - [Neural Network Interpretability and Explainability](#neural-network-interpretability-and-explainability)
   - [Vision Foundation Models for Segmentation and Beyond](#vision-foundation-models-for-segmentation-and-beyond)
+  - [Neural Network Interpretability and Explainability](#neural-network-interpretability-and-explainability)
   - [Domain Adaptation and Analysis](#domain-adaptation-and-analysis)
   - [Anomaly Detection and Localization](#anomaly-detection-and-localization)
   - [Misc. Breast Imaging Analysis](#misc-breast-imaging-analysis)
@@ -41,22 +41,22 @@ Development of novel perceptual metrics and generative models for medical imagin
 
 ---
 
-### Neural Network Interpretability and Explainability
-
-Methods for understanding what neural networks learn and how concepts are formed, including data attribution techniques and representation analysis to improve model transparency and trustworthiness, and others.
-
-<div class="publications">
-{% bibliography -f {{ site.scholar.bibliography }} --query @*[interpretability=true]* %}
-</div>
-
----
-
 ### Vision Foundation Models for Segmentation and Beyond
 
 Investigation of the capabilities and limitations of large-scale foundation models for medical image analysis, including enhanced architectures and performance evaluation across diverse downstream tasks.
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[foundationmodels=true]* %}
+</div>
+
+---
+
+### Neural Network Interpretability and Explainability
+
+Methods for understanding what neural networks learn and how concepts are formed, including data attribution techniques and representation analysis to improve model transparency and trustworthiness, and others.
+
+<div class="publications">
+{% bibliography -f {{ site.scholar.bibliography }} --query @*[interpretability=true]* %}
 </div>
 
 ---
