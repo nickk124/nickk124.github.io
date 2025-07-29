@@ -11,7 +11,7 @@ My research topics of interest, past and present.
 
 ## Topic List
 - [Topic List](#topic-list)
-  - [Intrinsic Properties and Statistics of Training Data and their Effects on Neural Network Generalization Ability](#intrinsic-properties-and-statistics-of-training-data-and-their-effects-on-neural-network-generalization-ability)
+  - [Intrinsic Properties of Training Data and their Effect on Neural Network Generalization Ability](#intrinsic-properties-of-training-data-and-their-effect-on-neural-network-generalization-ability)
   - [Image Distribution Similarity Metrics and Generative Models](#image-distribution-similarity-metrics-and-generative-models)
   - [Vision Foundation Models for Segmentation and Beyond](#vision-foundation-models-for-segmentation-and-beyond)
   - [Neural Network Interpretability and Explainability](#neural-network-interpretability-and-explainability)
@@ -21,7 +21,7 @@ My research topics of interest, past and present.
 
 ---
 
-### Intrinsic Properties and Statistics of Training Data and their Effects on Neural Network Generalization Ability
+### Intrinsic Properties of Training Data and their Effect on Neural Network Generalization Ability
 
 Research exploring how geometric and statistical properties of datasets, such as intrinsic dimension and label sharpness, influence neural network generalization across different imaging domains, particularly in how these differ betweeen natural and medical image models.
 
