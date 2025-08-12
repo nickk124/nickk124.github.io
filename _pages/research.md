@@ -11,7 +11,7 @@ My research topics of interest, past and present.
 
 ## Topic List
 - [Topic List](#topic-list)
-  - [Intrinsic Properties of Image Data Manifolds and their Effects on Neural Network Generalization Ability](#intrinsic-properties-of-image-data-manifolds-and-their-effects-on-neural-network-generalization-ability)
+  - [Intrinsic Properties of Image Data Manifolds and their Effects on Neural Network Generalization](#intrinsic-properties-of-image-data-manifolds-and-their-effects-on-neural-network-generalization)
   - [Image Distribution Similarity Metrics and Generative Models](#image-distribution-similarity-metrics-and-generative-models)
   - [Vision Foundation Models for Segmentation and Beyond](#vision-foundation-models-for-segmentation-and-beyond)
   - [Neural Network Interpretability and Explainability](#neural-network-interpretability-and-explainability)
@@ -21,9 +21,9 @@ My research topics of interest, past and present.
 
 ---
 
-### Intrinsic Properties of Image Data Manifolds and their Effects on Neural Network Generalization Ability
+### Intrinsic Properties of Image Data Manifolds and their Effects on Neural Network Generalization 
 
-Research exploring how geometric and statistical properties of image datasets, such as intrinsic dimension and label sharpness, influence neural network generalization across different imaging domains, particularly in how these differ betweeen natural and medical image models.
+Research exploring how geometric and statistical properties of image datasets, such as intrinsic dimension and label sharpness, influence neural network generalization across different imaging domains, particularly in how these differ between natural and medical imaging.
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[intrinsicproperties=true]* %}
@@ -63,7 +63,7 @@ Methods for understanding what neural networks learn and how concepts are formed
 
 ### Domain Adaptation and Analysis
 
-Techniques for adapting models across different imaging domains, scanners, and acquisition parameters, addressing the challenge of domain shift that commonly affects medical AI systems in practice, as well as understanding the nature of the domain shift problem itself.
+Techniques for adapting models across different imaging domains, scanners, and acquisition parameters, addressing the challenge of domain shift that commonly affects medical ML systems in practice, as well as understanding the nature of the domain shift problem itself.
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} --query @*[domainadaptation=true]* %}
