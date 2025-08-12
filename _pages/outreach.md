@@ -15,7 +15,7 @@ Since 2018, I’ve been a mentor for ERIRA (Educational Research in Radio Astron
 
 Group projects that I have lead have involved:
 
-1. Using deep learning to classify images of galaxies from scratch, or to automate the prediction of physical parameters of star clusters from raw star cluster images (normally a manual process). There is a particular focus on asking questions that would be seen in deep learning research, such as interpretability, model selection, generalization, the use of evaluation metrics, uncertainty quantification, overfitting, and others.
+1. Using deep learning to reason about the morphology of galaxies, or to automate the prediction of physical parameters of star clusters from raw star cluster images (normally a manual process), depending on the year. There is a particular focus on asking questions that would be seen in deep learning research, such as interpretability, model selection, generalization, the use of evaluation metrics, uncertainty quantification, overfitting, and others, as well as generally learning research-grade deep learning frameworks and practices.
 2. Using a 40-ft radio telescope to (1) image the arms of the Milky Way Galaxy, and use their Doppler-shifted observed frequencies to infer our height above the plane of the Galaxy.
 3. Using a 40-ft radio telescope to image the Milky Way's North Polar Spur and the Orion Nebula, and analyze and resolve polarized light and resolved structures.
 
