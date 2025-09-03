@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-08-15 14:00:00-0400
+date: 2025-06-18 09:00:00-0400
 inline: true
 related_posts: false
 ---
 
-Our paper was accepted to [SciForDL @ NeurIPS 2024](https://neurips.cc/virtual/2024/workshop/84735)! ([arXiv](https://arxiv.org/abs/2408.08381))
+Our vision foundation model paper, "SegmentAnyMuscle: A universal muscle segmentation model across different locations in MRI", has been released on the [arXiv](https://arxiv.org/abs/2506.22467)!

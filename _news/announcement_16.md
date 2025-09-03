@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-03-16 13:00:00-0400
+date: 2024-01-16 09:00:00-0500
 inline: true
 related_posts: false
 ---
 
-Our paper, "ContourDiff: Unpaired Image-to-Image Translation with Structural Consistency for Medical Imaging", has been released on the [arXiv](https://arxiv.org/abs/2403.10786)!
+Our paper, "The Effect of Intrinsic Dataset Properties on Generalization: Unraveling Learning Differences Between Natural and Medical Images" ([link here](https://arxiv.org/abs/2401.08865)), has been accepted to [ICLR 2024](https://iclr.cc/Conferences/2024)!

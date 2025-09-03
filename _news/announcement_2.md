@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-12-02 10:00:00-0500
+date: 2025-08-01 09:00:00-0400
 inline: true
 related_posts: false
 ---
 
-Our paper "Fréchet Radiomic Distance (FRD): A Versatile Metric for Comparing Medical Imaging Datasets" was released on [arXiv](https://arxiv.org/abs/2412.01496)!
+Our paper, "Are Vision Foundation Models Ready for Out-of-the-Box Medical Image Registration?" ([link here](https://arxiv.org/abs/2507.11569)), has been accepted at the [Deep-Brea<sup>3</sup>th](https://deep-breath-miccai.github.io/#) Workshop at [MICCAI 2025](https://conferences.miccai.org/2025/en/default.asp)!

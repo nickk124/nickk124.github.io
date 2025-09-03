@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-04-10 09:00:00-0400
+date: 2025-05-03 09:00:00-0400
 inline: true
 related_posts: false
 ---
 
-Our paper "Rethinking Perceptual Metrics for Medical Image Translation" was accepted at [MIDL 2024](https://2024.midl.io/)! ([arXiv](https://arxiv.org/abs/2404.07318))
+Our paper, "Accelerating Volumetric Medical Image Annotation via Short-Long Memory SAM 2", has been released on the [arXiv](https://arxiv.org/abs/2505.01854)!
