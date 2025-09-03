@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our vision foundation model paper, "SegmentAnyMuscle: A universal muscle segmentation model across different locations in MRI", has been released on the [arXiv](https://arxiv.org/abs/2506.22467)!
+Our paper, "SegmentAnyMuscle: A universal muscle segmentation model across different locations in MRI", has been released on the [arXiv](https://arxiv.org/abs/2506.22467)!
