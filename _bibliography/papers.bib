@@ -1,5 +1,19 @@
 ---
 ---
+@article{zhang2024quantifying,
+  title={Quantifying the Limits of Segmentation Foundation Models: Modeling Challenges in Segmenting Tree-Like and Low-Contrast Objects},
+  author={Zhang*, Yixin and Konz*, Nicholas and Kramer, Kevin and Mazurowski, Maciej A.},
+  journal={WACV},
+  year={2026},
+  arxiv={2412.04243},
+  selected={true},
+  bibtex_show = true,
+  preview={samfailure.jpg},
+  code={https://github.com/mazurowski-lab/SAM-TexturalConfusion-Metrics},
+  abstract={Image segmentation foundation models (SFMs) like Segment Anything Model (SAM) have achieved impressive zero-shot and interactive segmentation across diverse domains. However, they struggle to segment objects with certain structures, particularly those with dense, tree-like morphology and low textural contrast from their surroundings. These failure modes are crucial for understanding the limitations of SFMs in real-world applications. To systematically study this issue, we introduce interpretable metrics quantifying object tree-likeness and textural separability. On carefully controlled synthetic experiments and real-world datasets, we show that SFM performance (e.g., SAM, SAM 2, HQ-SAM) noticeably correlates with these factors. We link these failures to "textural confusion", where models misinterpret local structure as global texture, causing over-segmentation or difficulty distinguishing objects from similar backgrounds. Notably, targeted fine-tuning fails to resolve this issue, indicating a fundamental limitation. Our study provides the first quantitative framework for modeling the behavior of SFMs on challenging structures, offering interpretable insights into their segmentation capabilities. },
+  foundationmodels={true}
+}
+
 @article{gu2025vision,
   title   = {Are Vision Foundation Models Ready for Out-of-the-Box Medical Image Registration?},
   author  = {Gu*, Hanxue and Chen*, Yaqian and Konz, Nicholas and Li, Qihang and Mazurowski, Maciej A},
@@ -31,19 +45,6 @@
   generativemodels={true},
 }
 
-@article{zhang2024quantifying,
-  title={Quantifying the Limits of Segmentation Foundation Models: Modeling Challenges in Segmenting Tree-Like and Low-Contrast Objects},
-  author={Zhang*, Yixin and Konz*, Nicholas and Kramer, Kevin and Mazurowski, Maciej A.},
-  journal={WACV},
-  year={2026},
-  arxiv={2412.04243},
-  selected={true},
-  bibtex_show = true,
-  preview={samfailure.jpg},
-  code={https://github.com/mazurowski-lab/SAM-TexturalConfusion-Metrics},
-  abstract={Image segmentation foundation models (SFMs) like Segment Anything Model (SAM) have achieved impressive zero-shot and interactive segmentation across diverse domains. However, they struggle to segment objects with certain structures, particularly those with dense, tree-like morphology and low textural contrast from their surroundings. These failure modes are crucial for understanding the limitations of SFMs in real-world applications. To systematically study this issue, we introduce interpretable metrics quantifying object tree-likeness and textural separability. On carefully controlled synthetic experiments and real-world datasets, we show that SFM performance (e.g., SAM, SAM 2, HQ-SAM) noticeably correlates with these factors. We link these failures to "textural confusion", where models misinterpret local structure as global texture, causing over-segmentation or difficulty distinguishing objects from similar backgrounds. Notably, targeted fine-tuning fails to resolve this issue, indicating a fundamental limitation. Our study provides the first quantitative framework for modeling the behavior of SFMs on challenging structures, offering interpretable insights into their segmentation capabilities. },
-  foundationmodels={true}
-}
 
 @article{konz2024pre,
   title={Pre-processing and Compression: Understanding Hidden Representation Refinement Across Imaging Domains via Intrinsic Dimension},
