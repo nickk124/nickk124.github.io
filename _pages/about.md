@@ -9,7 +9,7 @@ profile:
   image: nick_kyoto_lowres.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Email: nicholas (dot) konz (at) duke (dot) edu</p>
+    <p>Email: nickk124 (at) cs (dot) unc (dot) edu</p>
     <p>Bluesky 🦋: @nickkonz.bsky.social</p>
 
 news: true  # includes a list of news items
