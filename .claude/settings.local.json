@@ -8,7 +8,10 @@
       "WebFetch(domain:arxiv.org)",
       "WebFetch(domain:arxiv.org)",
       "WebFetch(domain:arxiv.org)",
-      "WebFetch(domain:x-omni-team.github.io)"
+      "WebFetch(domain:x-omni-team.github.io)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(docker-compose:*)"
     ],
     "deny": [],
     "ask": []

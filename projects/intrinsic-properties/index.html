@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intrinsic Dataset Properties & Generalization (ICLR 2024)</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+    }
+    .navbar {
+      background-color: #fff;
+      border-bottom: 1px solid #e8e8e8;
+    }
+    .hero-body {
+      padding: 3rem 1.5rem 2rem;
+    }
+    .publication-title {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .publication-authors {
+      margin-top: 0.75rem;
+    }
+    .author-block {
+      display: inline-block;
+    }
+    .publication-venue {
+      margin-top: 0.5rem;
+    }
+    .publication-links {
+      margin-top: 1.25rem;
+    }
+    .publication-links .button {
+      margin: 0.25rem;
+    }
+    .teaser-image {
+      margin-top: 1rem;
+    }
+    .teaser-image img {
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .teaser-caption {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #555;
+      text-align: left;
+    }
+    .section-title {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .abstract-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      text-align: justify;
+    }
+    .contribution-item {
+      margin-bottom: 0.75rem;
+    }
+    .bibtex-block {
+      background: #f5f5f5;
+      border-radius: 6px;
+      padding: 1.25rem 1.5rem;
+      font-family: 'Castoro', monospace;
+      font-size: 0.85rem;
+      white-space: pre-wrap;
+      text-align: left;
+      overflow-x: auto;
+    }
+    .footer {
+      background-color: #f5f5f5;
+      padding: 2rem 1.5rem;
+      font-size: 0.875rem;
+      color: #666;
+    }
+    .footer a {
+      color: #3273dc;
+    }
+    .tag.is-venue {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+    }
+    .highlight-box {
+      background: #f0f4ff;
+      border-left: 4px solid #3273dc;
+      border-radius: 4px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .highlight-box p {
+      margin: 0;
+    }
+    .metric-label {
+      font-weight: 700;
+      color: #3273dc;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://nickk124.github.io/">
+      <span style="font-family:'Google Sans',sans-serif; font-weight:700;">Nick Konz</span>
+    </a>
+  </div>
+</nav>
+
+<!-- Hero / Title -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h1 class="publication-title">
+        The Effect of Intrinsic Dataset Properties on Generalization:<br>
+        Unraveling Learning Differences Between Natural and Medical Images
+      </h1>
+
+      <div class="publication-authors is-size-5">
+        <span class="author-block">
+          <a href="https://nickk124.github.io/">Nicholas Konz</a>,&nbsp;
+        </span>
+        <span class="author-block">
+          <a href="https://sites.duke.edu/mazurowski/">Maciej A. Mazurowski</a>
+        </span>
+      </div>
+
+      <div class="is-size-6" style="margin-top:0.4rem; color:#555;">
+        Duke University
+      </div>
+
+      <div class="publication-venue" style="margin-top:0.75rem;">
+        <span class="tag is-link is-venue">ICLR 2024</span>
+      </div>
+
+      <div class="publication-links">
+        <a href="https://arxiv.org/abs/2401.08865" class="button is-dark is-rounded" target="_blank">
+          <span class="icon"><i class="ai ai-arxiv"></i></span>
+          <span>arXiv</span>
+        </a>
+        <a href="https://openreview.net/forum?id=ixP76Y33y1" class="button is-dark is-rounded" target="_blank">
+          <span class="icon"><i class="fas fa-file-alt"></i></span>
+          <span>OpenReview</span>
+        </a>
+        <a href="https://github.com/mazurowski-lab/intrinsic-properties" class="button is-dark is-rounded" target="_blank">
+          <span class="icon"><i class="fab fa-github"></i></span>
+          <span>Code</span>
+        </a>
+        <a href="/assets/pdf/intrinsicproperties_iclr2024.pdf" class="button is-dark is-rounded" target="_blank">
+          <span class="icon"><i class="fas fa-chalkboard"></i></span>
+          <span>Poster</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser Figure -->
+<section class="section" style="padding-top:0; padding-bottom:2rem;">
+  <div class="container is-max-desktop">
+    <div class="teaser-image has-text-centered">
+      <img src="https://raw.githubusercontent.com/mazurowski-lab/intrinsic-properties/main/figures/teaser.png"
+           alt="Teaser figure showing generalization scaling laws across imaging domains" style="max-width:100%;">
+      <p class="teaser-caption">
+        <b>Neural networks generalize differently across imaging domains.</b>
+        Generalization error increases with the intrinsic dimension <em>d</em><sub>data</sub> of the training set,
+        but the steepness of this relationship differs markedly between natural and medical images.
+        We explain this discrepancy through our proposed <em>label sharpness</em> metric, and derive
+        a theoretical generalization scaling law unifying both domains.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract -->
+<section class="section" style="padding-top:1.5rem; padding-bottom:1.5rem;">
+  <div class="container is-max-desktop">
+    <h2 class="section-title has-text-centered">Abstract</h2>
+    <p class="abstract-text">
+      This paper investigates discrepancies in how neural networks learn from different imaging domains,
+      which are commonly overlooked when adopting computer vision techniques from the domain of natural images
+      to other specialized domains such as medical images. Recent works have found that the generalization
+      error of a trained network typically increases with the intrinsic dimension (<em>d</em><sub>data</sub>)
+      of its training set. Yet, the steepness of this relationship varies significantly between medical
+      (radiological) and natural imaging domains, with no existing theoretical explanation.
+    </p>
+    <br>
+    <p class="abstract-text">
+      We address this gap in knowledge by establishing and empirically validating a generalization scaling
+      law with respect to <em>d</em><sub>data</sub>, and propose that the substantial scaling discrepancy
+      between the two considered domains may be at least partially attributed to the higher intrinsic
+      <em>label sharpness</em> (<em>K</em><sub>F</sub>) of medical imaging datasets, a metric which we propose.
+      Next, we demonstrate an additional benefit of measuring the label sharpness of a training set: it is
+      negatively correlated with the trained model's adversarial robustness, which notably leads to models
+      for medical images having a substantially higher vulnerability to adversarial attack. Finally, we extend
+      our <em>d</em><sub>data</sub> formalism to the related metric of learned representation intrinsic dimension
+      (<em>d</em><sub>repr</sub>), derive a generalization scaling law with respect to <em>d</em><sub>repr</sub>,
+      and show that <em>d</em><sub>data</sub> serves as an upper bound for <em>d</em><sub>repr</sub>.
+      Our theoretical results are supported by thorough experiments with six models and eleven natural and medical
+      imaging datasets over a range of training set sizes.
+    </p>
+  </div>
+</section>
+
+<!-- Key Contributions -->
+<section class="section" style="background:#fafafa; padding-top:2rem; padding-bottom:2rem;">
+  <div class="container is-max-desktop">
+    <h2 class="section-title has-text-centered">Key Contributions</h2>
+
+    <div class="highlight-box">
+      <p>
+        <span class="metric-label">1. Generalization Scaling Law.</span>&ensp;
+        We derive a theoretical generalization scaling law as a function of the training set's intrinsic
+        dimension <em>d</em><sub>data</sub>, and empirically validate it across natural and medical imaging datasets.
+      </p>
+    </div>
+
+    <div class="highlight-box">
+      <p>
+        <span class="metric-label">2. Label Sharpness (<em>K</em><sub>F</sub>).</span>&ensp;
+        We propose <em>label sharpness</em>, a new dataset metric measuring the extent to which images
+        can resemble each other while still having different labels. Medical imaging datasets have
+        systematically higher label sharpness than natural image datasets, which we show partially
+        explains the observed domain discrepancy in generalization scaling.
+      </p>
+    </div>
+
+    <div class="highlight-box">
+      <p>
+        <span class="metric-label">3. Adversarial Robustness Connection.</span>&ensp;
+        Label sharpness is negatively correlated with a model's adversarial robustness — meaning
+        medical image models are substantially more vulnerable to adversarial attack than their
+        natural image counterparts.
+      </p>
+    </div>
+
+    <div class="highlight-box">
+      <p>
+        <span class="metric-label">4. Representation Intrinsic Dimension.</span>&ensp;
+        We extend our framework to the intrinsic dimension of learned representations
+        (<em>d</em><sub>repr</sub>), deriving a corresponding scaling law and showing that
+        <em>d</em><sub>data</sub> serves as an upper bound for <em>d</em><sub>repr</sub>.
+      </p>
+    </div>
+
+    <div class="highlight-box">
+      <p>
+        <span class="metric-label">5. Large-Scale Empirical Validation.</span>&ensp;
+        Results are validated with 6 network architectures and 11 natural and medical imaging
+        datasets across a range of training set sizes.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Code Usage -->
+<section class="section" style="padding-top:2rem; padding-bottom:2rem;">
+  <div class="container is-max-desktop">
+    <h2 class="section-title has-text-centered">Code</h2>
+    <p style="margin-bottom:1rem;">
+      Our codebase lets you measure intrinsic properties of any PyTorch dataset:
+      label sharpness <em>K&#770;</em><sub>F</sub>, data intrinsic dimension <em>d</em><sub>data</sub>,
+      and representation intrinsic dimension <em>d</em><sub>repr</sub>.
+    </p>
+    <pre style="background:#1e1e1e; color:#d4d4d4; border-radius:8px; padding:1.25rem 1.5rem; font-size:0.85rem; overflow-x:auto; line-height:1.6;"><code><span style="color:#9cdcfe;">from</span> datasetproperties <span style="color:#9cdcfe;">import</span> compute_labelsharpness, compute_intrinsic_datadim, compute_intrinsic_reprdim
+
+<span style="color:#9cdcfe;">from</span> torchvision.datasets <span style="color:#9cdcfe;">import</span> CIFAR10
+<span style="color:#9cdcfe;">from</span> torchvision.transforms <span style="color:#9cdcfe;">import</span> ToTensor
+<span style="color:#9cdcfe;">from</span> torchvision.models <span style="color:#9cdcfe;">import</span> resnet18, ResNet18_Weights
+<span style="color:#9cdcfe;">from</span> torch.utils.data <span style="color:#9cdcfe;">import</span> Subset
+
+<span style="color:#6a9955;"># load your dataset</span>
+dataset = CIFAR10(root=<span style="color:#ce9178;">'data'</span>, download=True, transform=ToTensor())
+classes = [0, 1]
+dataset = Subset(dataset, [i <span style="color:#c586c0;">for</span> i, s <span style="color:#c586c0;">in</span> enumerate(dataset) <span style="color:#c586c0;">if</span> s[1] <span style="color:#c586c0;">in</span> classes])
+
+<span style="color:#6a9955;"># compute intrinsic properties</span>
+KF       = compute_labelsharpness(dataset)
+datadim  = compute_intrinsic_datadim(dataset)
+
+model    = resnet18(weights=ResNet18_Weights.IMAGENET1K_V1).to(<span style="color:#ce9178;">"cuda"</span>)
+reprdim  = compute_intrinsic_reprdim(dataset, model, model.layer4)
+
+print(<span style="color:#ce9178;">f"Label sharpness      = {KF:.3f}"</span>)
+print(<span style="color:#ce9178;">f"Data intrinsic dim   = {int(datadim)}"</span>)
+print(<span style="color:#ce9178;">f"Repr intrinsic dim   = {int(reprdim)}"</span>)</code></pre>
+
+    <div class="has-text-centered" style="margin-top:1.25rem;">
+      <a href="https://github.com/mazurowski-lab/intrinsic-properties" class="button is-link is-rounded" target="_blank">
+        <span class="icon"><i class="fab fa-github"></i></span>
+        <span>View Full Code on GitHub</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Related Work -->
+<section class="section" style="background:#fafafa; padding-top:2rem; padding-bottom:2rem;">
+  <div class="container is-max-desktop">
+    <h2 class="section-title has-text-centered">Related Work</h2>
+    <div class="content">
+      <ul>
+        <li>
+          <a href="https://arxiv.org/abs/2408.08381" target="_blank">
+            Pre-processing and Compression: Understanding Hidden Representation Refinement Across Imaging Domains via Intrinsic Dimension
+          </a>
+          — SciForDL @ NeurIPS 2024
+        </li>
+        <li>
+          <a href="https://arxiv.org/abs/2207.02797" target="_blank">
+            The Intrinsic Manifolds of Radiological Images and their Role in Deep Learning
+          </a>
+          — MICCAI 2022
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BibTeX -->
+<section class="section" style="padding-top:2rem; padding-bottom:2rem;">
+  <div class="container is-max-desktop">
+    <h2 class="section-title has-text-centered">BibTeX</h2>
+    <pre class="bibtex-block">@inproceedings{konz2024intrinsicproperties,
+  title     = {The Effect of Intrinsic Dataset Properties on Generalization:
+               Unraveling Learning Differences Between Natural and Medical Images},
+  author    = {Konz, Nicholas and Mazurowski, Maciej A},
+  booktitle = {The Twelfth International Conference on Learning Representations (ICLR)},
+  year      = {2024},
+  url       = {https://openreview.net/forum?id=ixP76Y33y1}
+}</pre>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container is-max-desktop has-text-centered">
+    <p>
+      This page was built using the
+      <a href="https://nerfies.github.io/" target="_blank">Academic Project Page Template</a>
+      adopted from the Nerfies project page.
+    </p>
+    <p style="margin-top:0.5rem;">
+      <a href="https://nickk124.github.io/">Back to Nick Konz's homepage</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
