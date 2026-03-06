@@ -3,7 +3,7 @@ layout: page
 permalink: /talks/
 title: Talks, Posters, and Tutorials
 description:
-nav: true
+nav: false
 nav_order: 3
 ---
 

@@ -11,7 +11,12 @@
       "WebFetch(domain:x-omni-team.github.io)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:github.com)",
-      "Bash(docker-compose:*)"
+      "Bash(docker-compose:*)",
+      "Bash(grep:*)",
+      "Bash(for f in \"/Users/nickk124/OneDrive - Duke University/professional/personalwebsite/nickk124.github.io/_pages/\"*.md)",
+      "Bash(do echo \"=== $f ===\")",
+      "Read(//Users/nickk124/OneDrive - Duke University/professional/personalwebsite/nickk124.github.io/**)",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []
