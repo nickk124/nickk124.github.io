@@ -130,6 +130,17 @@
         {% assign entrytype_text = entrytype | strip_html | strip %}
         {%- capture periodical -%}{{ entrytype }}{%- if entrytype_text != "" and entryyear != "" -%}, {%- endif -%}{{ entrymonth }}{{ entryyear }}{%- endcapture -%}
         <div class="periodical">
+          {%- if entry.abbr -%}
+            {%- if site.data.venues[entry.abbr] -%}
+              {%- assign venue_style = nil -%}
+              {%- if site.data.venues[entry.abbr].color != blank -%}
+                {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' -%}
+              {%- endif -%}
+              <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}>{% if site.data.venues[entry.abbr].url %}<a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a>{% else %}{{entry.abbr}}{% endif %}</abbr>
+            {%- else -%}
+              <abbr class="badge">{{entry.abbr}}</abbr>
+            {%- endif -%}
+          {%- endif -%}
           {{ periodical | strip }}
         </div>
         <div class="periodical">

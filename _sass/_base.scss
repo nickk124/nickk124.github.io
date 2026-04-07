@@ -1063,6 +1063,24 @@ nav[data-toggle="toc"] {
   }
 }
 
+// News category badges
+.news-badge {
+  display: inline-block;
+  padding: 0.1em 0.45em;
+  font-size: 0.68rem;
+  font-weight: 600;
+  border-radius: 3px;
+  color: #fff;
+  white-space: nowrap;
+
+  &.news-badge-paper    { background-color: #0076df; }
+  &.news-badge-preprint { background-color: #828282; }
+  &.news-badge-award    { background-color: #c8960c; }
+  &.news-badge-position { background-color: #3d8f41; }
+  &.news-badge-service  { background-color: #6c757d; }
+  &.news-badge-milestone{ background-color: #7b2fbe; }
+}
+
 // News section
 .news {
   font-size: 0.8rem;

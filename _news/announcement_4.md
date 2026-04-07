@@ -3,6 +3,7 @@ layout: post
 date: 2025-06-18 09:00:00-0400
 inline: true
 related_posts: false
+category: preprint
 ---
 
 Our paper, "SegmentAnyMuscle: A universal muscle segmentation model across different locations in MRI", has been released on the [arXiv](https://arxiv.org/abs/2506.22467)!

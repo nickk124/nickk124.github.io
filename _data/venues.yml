@@ -1,6 +1,68 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+# Journals (green)
+"MedIA":
+  url: https://www.sciencedirect.com/journal/medical-image-analysis
+  color: "#3d8f41"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"IEEE TMI":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42
+  color: "#3d8f41"
+
+"JAMA":
+  url: https://jamanetwork.com/journals/jamanetworkopen
+  color: "#3d8f41"
+
+"MELBA":
+  url: https://melba-journal.org
+  color: "#3d8f41"
+
+"J. Digital":
+  url: https://link.springer.com/journal/10278
+  color: "#3d8f41"
+
+"ApJ":
+  url: https://iopscience.iop.org/journal/0067-0049
+  color: "#3d8f41"
+
+# Top-tier conference (purple)
+"ICLR":
+  url: https://iclr.cc
+  color: "#7b2fbe"
+
+# Conferences (blue)
+"MICCAI":
+  url: https://miccai.org
+  color: "#0076df"
+
+"WACV":
+  url: https://wacv.thecvf.com
+  color: "#0076df"
+
+"EMNLP":
+  url: https://aclanthology.org/venues/emnlp/
+  color: "#0076df"
+
+"MIDL":
+  url: https://midl.io
+  color: "#0076df"
+
+"ICHI":
+  url: https://www.ieee-ichi.org
+  color: "#0076df"
+
+# Workshops (orange)
+"MICCAI-W":
+  url: https://miccai.org
+  color: "#e07b39"
+
+"NeurIPS-W":
+  url: https://neurips.cc
+  color: "#e07b39"
+
+"CVPR-W":
+  url: https://cvpr.thecvf.com
+  color: "#e07b39"
+
+# Preprints (gray)
+"arXiv":
+  url: https://arxiv.org
+  color: "#828282"

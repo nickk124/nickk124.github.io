@@ -11,7 +11,12 @@
               {% endif %}
               {% for item in news limit: news_limit %}
                 <tr>
-                  <th scope="row" style="width: 20%">{{ item.date | date: "%b %-d, %Y" }}</th>
+                  <th scope="row" style="width: 18%">{{ item.date | date: "%b %-d, %Y" }}</th>
+                  <td style="width: 9%; vertical-align: middle;">
+                    {%- if item.category -%}
+                      <span class="news-badge news-badge-{{ item.category }}">{{ item.category | capitalize }}</span>
+                    {%- endif -%}
+                  </td>
                   <td>
                     {% if item.inline -%}
                       {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
