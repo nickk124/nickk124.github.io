@@ -31,7 +31,7 @@
 # Conferences (blue)
 "MICCAI":
   url: https://miccai.org
-  color: "#0076df"
+  color: "#7b2fbe"
 
 "WACV":
   url: https://wacv.thecvf.com
@@ -39,7 +39,7 @@
 
 "EMNLP":
   url: https://aclanthology.org/venues/emnlp/
-  color: "#0076df"
+  color: "#7b2fbe"
 
 "MIDL":
   url: https://midl.io
