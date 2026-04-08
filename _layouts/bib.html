@@ -5,6 +5,7 @@
         {%- if site.enable_publication_thumbnails -%}
         <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
         {%- if entry.preview -%}
+          <div class="preview-wrapper">
           {% if entry.preview contains '://' -%}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
           {%- else -%}
@@ -15,6 +16,18 @@
             zoomable=false
             alt=entry.preview -%}
           {%- endif -%}
+          {%- if entry.abbr -%}
+            {%- if site.data.venues[entry.abbr] -%}
+              {%- assign venue_style = nil -%}
+              {%- if site.data.venues[entry.abbr].color != blank -%}
+                {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' -%}
+              {%- endif -%}
+              <abbr class="badge preview-badge" {% if venue_style %}{{venue_style}}{% endif %}>{{entry.abbr}}</abbr>
+            {%- else -%}
+              <abbr class="badge preview-badge">{{entry.abbr}}</abbr>
+            {%- endif -%}
+          {%- endif -%}
+          </div>
         {%- elsif entry.abbr -%}
           {%- if site.data.venues[entry.abbr] -%}
             {%- assign venue_style = nil -%}
@@ -130,17 +143,6 @@
         {% assign entrytype_text = entrytype | strip_html | strip %}
         {%- capture periodical -%}{{ entrytype }}{%- if entrytype_text != "" and entryyear != "" -%}, {%- endif -%}{{ entrymonth }}{{ entryyear }}{%- endcapture -%}
         <div class="periodical">
-          {%- if entry.abbr -%}
-            {%- if site.data.venues[entry.abbr] -%}
-              {%- assign venue_style = nil -%}
-              {%- if site.data.venues[entry.abbr].color != blank -%}
-                {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' -%}
-              {%- endif -%}
-              <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}>{{entry.abbr}}</abbr>&nbsp;
-            {%- else -%}
-              <abbr class="badge">{{entry.abbr}}</abbr>&nbsp;
-            {%- endif -%}
-          {%- endif -%}
           {{ periodical | strip }}
         </div>
         <div class="periodical">

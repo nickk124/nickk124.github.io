@@ -1063,11 +1063,23 @@ nav[data-toggle="toc"] {
   }
 }
 
-// Publication venue badges (in periodical line)
-abbr.badge {
-  a {
+// Publication venue badge overlaid on thumbnail
+.preview-wrapper {
+  position: relative;
+  display: block;
+
+  .preview-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    z-index: 1;
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 0.15em 0.45em;
     color: #fff !important;
-    &:hover { text-decoration: none; }
+    border-radius: 3px;
+    line-height: 1.4;
+    pointer-events: none;
   }
 }
 
