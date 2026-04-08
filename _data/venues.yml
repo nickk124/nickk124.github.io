@@ -7,7 +7,7 @@
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42
   color: "#3d8f41"
 
-"JAMA":
+"JAMA NetOpen":
   url: https://jamanetwork.com/journals/jamanetworkopen
   color: "#3d8f41"
 
@@ -15,11 +15,11 @@
   url: https://melba-journal.org
   color: "#3d8f41"
 
-"J. Digital":
+"JDIM":
   url: https://link.springer.com/journal/10278
   color: "#3d8f41"
 
-"ApJ":
+"ApJS":
   url: https://iopscience.iop.org/journal/0067-0049
   color: "#3d8f41"
 
