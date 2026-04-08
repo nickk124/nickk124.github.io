@@ -1063,6 +1063,14 @@ nav[data-toggle="toc"] {
   }
 }
 
+// Publication venue badges (in periodical line)
+abbr.badge {
+  a {
+    color: #fff !important;
+    &:hover { text-decoration: none; }
+  }
+}
+
 // News category badges
 .news-badge {
   display: inline-block;
