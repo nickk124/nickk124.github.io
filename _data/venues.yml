@@ -1,37 +1,36 @@
-# Journals (green)
+# Journals (purple)
 "MedIA":
   url: https://www.sciencedirect.com/journal/medical-image-analysis
-  color: "#3d8f41"
+  color: "#7b2fbe"
 
 "IEEE TMI":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42
-  color: "#3d8f41"
+  color: "#7b2fbe"
 
 "JAMA NetOpen":
   url: https://jamanetwork.com/journals/jamanetworkopen
-  color: "#3d8f41"
+  color: "#7b2fbe"
 
 "MELBA":
   url: https://melba-journal.org
-  color: "#3d8f41"
+  color: "#7b2fbe"
 
 "JDIM":
   url: https://link.springer.com/journal/10278
-  color: "#3d8f41"
+  color: "#7b2fbe"
 
 "ApJS":
   url: https://iopscience.iop.org/journal/0067-0049
-  color: "#3d8f41"
-
-# Top-tier conference (purple)
-"ICLR":
-  url: https://iclr.cc
   color: "#7b2fbe"
 
 # Conferences (blue)
+"ICLR":
+  url: https://iclr.cc
+  color: "#0076df"
+
 "MICCAI":
   url: https://miccai.org
-  color: "#7b2fbe"
+  color: "#0076df"
 
 "WACV":
   url: https://wacv.thecvf.com
@@ -39,7 +38,7 @@
 
 "EMNLP":
   url: https://aclanthology.org/venues/emnlp/
-  color: "#7b2fbe"
+  color: "#0076df"
 
 "MIDL":
   url: https://midl.io
