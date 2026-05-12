@@ -3,7 +3,7 @@ layout: page
 permalink: /cv/
 title: CV
 description:
-nav: true
+nav: false
 nav_order: 1
 ---
 
