@@ -6,4 +6,4 @@ related_posts: false
 category: paper
 ---
 
-One [paper](https://arxiv.org/abs/2604.21060) on expert-guided multiple-instance learning for pediatric brain tumor classification has been accepted to [ICHI 2026](https://zhang-informatics.github.io/ICHI2026/)!
+📝 One [paper](https://arxiv.org/abs/2604.21060) on expert-guided multiple-instance learning for pediatric brain tumor classification has been accepted to [ICHI 2026](https://zhang-informatics.github.io/ICHI2026/)!

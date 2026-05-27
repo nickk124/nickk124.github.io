@@ -6,4 +6,4 @@ related_posts: false
 category: preprint
 ---
 
-Our paper, "GuidedMorph: Two-Stage Deformable Registration for Breast MRI", has been released on the [arXiv](https://arxiv.org/abs/2505.13414)!
+📝 Our paper, "GuidedMorph: Two-Stage Deformable Registration for Breast MRI", has been released on the [arXiv](https://arxiv.org/abs/2505.13414)!

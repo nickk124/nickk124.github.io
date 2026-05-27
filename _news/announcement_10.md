@@ -6,4 +6,4 @@ related_posts: false
 category: preprint
 ---
 
-Our paper, "Pre-processing and Compression: Understanding Hidden Representation Refinement Across Imaging Domains via Intrinsic Dimension", has been released on the [arXiv](https://arxiv.org/abs/2408.08381)!
+📝 Our paper, "Pre-processing and Compression: Understanding Hidden Representation Refinement Across Imaging Domains via Intrinsic Dimension", has been released on the [arXiv](https://arxiv.org/abs/2408.08381)!

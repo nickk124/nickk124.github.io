@@ -6,4 +6,4 @@ related_posts: false
 category: preprint
 ---
 
-Our paper, "Quantifying the Limits of Segmentation Foundation Models: Modeling Challenges in Segmenting Tree-Like and Low-Contrast Objects", has been released on the [arXiv](https://arxiv.org/abs/2412.04243)!
+📝 Our paper, "Quantifying the Limits of Segmentation Foundation Models: Modeling Challenges in Segmenting Tree-Like and Low-Contrast Objects", has been released on the [arXiv](https://arxiv.org/abs/2412.04243)!

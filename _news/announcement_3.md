@@ -6,4 +6,4 @@ related_posts: false
 category: preprint
 ---
 
-Our paper, "Are Vision Foundation Models Ready for Out-of-the-Box Medical Image Registration?", has been released on the [arXiv](https://arxiv.org/abs/2507.11569)!
+📝 Our paper, "Are Vision Foundation Models Ready for Out-of-the-Box Medical Image Registration?", has been released on the [arXiv](https://arxiv.org/abs/2507.11569)!

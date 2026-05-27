@@ -6,4 +6,4 @@ related_posts: false
 category: position
 ---
 
-My postdoc at the UNITES Lab in the [UNC Chapel Hill](https://www.unc.edu/) CS Department under [Prof. Tianlong Chen](https://tianlong-chen.github.io/) has officially begun!
+🎉 My postdoc at the UNITES Lab in the [UNC Chapel Hill](https://www.unc.edu/) CS Department under [Prof. Tianlong Chen](https://tianlong-chen.github.io/) has officially begun!

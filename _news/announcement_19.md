@@ -6,4 +6,4 @@ related_posts: false
 category: paper
 ---
 
-Our paper, "Accelerating Volumetric Medical Image Annotation via Short-Long Memory SAM 2" (preprint [here](https://arxiv.org/abs/2505.01854)) has been accepted for publication in [IEEE Transactions on Medical Imaging (TMI)](https://ieeetmi.org/)!
+📝 Our paper, "Accelerating Volumetric Medical Image Annotation via Short-Long Memory SAM 2" (preprint [here](https://arxiv.org/abs/2505.01854)) has been accepted for publication in [IEEE Transactions on Medical Imaging (TMI)](https://ieeetmi.org/)!

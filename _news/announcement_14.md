@@ -6,4 +6,4 @@ related_posts: false
 category: paper
 ---
 
-Our paper, "Medical Image Segmentation with InTEnt: Integrated Entropy Weighting for Single Image Test-Time Adaptation" ([link here](https://arxiv.org/abs/2402.09604)), has been accepted for an **oral presentation** at the [DEF-AI-MIA](https://ai-medical-image-analysis.github.io/4th/) workshop at [CVPR 2024](https://cvpr.thecvf.com/Conferences/2024)!
+📝 Our paper, "Medical Image Segmentation with InTEnt: Integrated Entropy Weighting for Single Image Test-Time Adaptation" ([link here](https://arxiv.org/abs/2402.09604)), has been accepted for an **oral presentation** at the [DEF-AI-MIA](https://ai-medical-image-analysis.github.io/4th/) workshop at [CVPR 2024](https://cvpr.thecvf.com/Conferences/2024)!

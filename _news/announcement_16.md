@@ -6,4 +6,4 @@ related_posts: false
 category: paper
 ---
 
-Our paper, "The Effect of Intrinsic Dataset Properties on Generalization: Unraveling Learning Differences Between Natural and Medical Images" ([link here](https://arxiv.org/abs/2401.08865)), has been accepted to [ICLR 2024](https://iclr.cc/Conferences/2024)!
+📝 Our paper, "The Effect of Intrinsic Dataset Properties on Generalization: Unraveling Learning Differences Between Natural and Medical Images" ([link here](https://arxiv.org/abs/2401.08865)), has been accepted to [ICLR 2024](https://iclr.cc/Conferences/2024)!

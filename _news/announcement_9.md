@@ -6,4 +6,4 @@ related_posts: false
 category: preprint
 ---
 
-Our paper, "Fréchet Radiomic Distance (FRD): A Versatile Metric for Comparing Medical Imaging Datasets", has been released on the [arXiv](https://arxiv.org/abs/2412.01496)!
+📝 Our paper, "Fréchet Radiomic Distance (FRD): A Versatile Metric for Comparing Medical Imaging Datasets", has been released on the [arXiv](https://arxiv.org/abs/2412.01496)!

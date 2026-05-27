@@ -6,4 +6,4 @@ related_posts: false
 category: milestone
 ---
 
-**I've successfully defended my PhD!** Thank you to my advisor and committee members, and everyone in my life who has supported me along the way.
+🎓 **I've successfully defended my PhD!** Thank you to my advisor and committee members, and everyone in my life who has supported me along the way.

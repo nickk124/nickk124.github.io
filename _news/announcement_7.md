@@ -6,4 +6,4 @@ related_posts: false
 category: preprint
 ---
 
-Our paper, "Accelerating Volumetric Medical Image Annotation via Short-Long Memory SAM 2", has been released on the [arXiv](https://arxiv.org/abs/2505.01854)!
+📝 Our paper, "Accelerating Volumetric Medical Image Annotation via Short-Long Memory SAM 2", has been released on the [arXiv](https://arxiv.org/abs/2505.01854)!

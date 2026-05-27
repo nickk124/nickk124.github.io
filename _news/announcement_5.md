@@ -6,4 +6,4 @@ related_posts: false
 category: preprint
 ---
 
-Our paper, "MRI-CORE: A Foundation Model for Magnetic Resonance Imaging", has been released on the [arXiv](https://arxiv.org/abs/2506.12186)!
+📝 Our paper, "MRI-CORE: A Foundation Model for Magnetic Resonance Imaging", has been released on the [arXiv](https://arxiv.org/abs/2506.12186)!
