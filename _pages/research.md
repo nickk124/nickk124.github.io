@@ -7,7 +7,7 @@ nav: true
 nav_order: 2
 ---
 
-My research topics of interest, past and present.
+<!-- My research topics of interest, past and present.
 
 ## Current Research
 
@@ -21,11 +21,12 @@ Design and evaluation of agentic AI systems and multimodal models for clinical a
 
 Applying and adapting large language models to scientific domains, including protein structure/function prediction and genomic sequence modeling, with a focus on how foundational LM principles transfer to biological data.
 
----
+--- -->
 
-## Prior Research Topics
+## Research Topics
 
-- [Intrinsic Properties of Image Data Manifolds and their Effects on Neural Network Generalization](#intrinsic-properties-of-image-data-manifolds-and-their-effects-on-neural-network-generalization)
+- [Research Topics](#research-topics)
+  - [Intrinsic Properties of Image Data Manifolds and their Effects on Neural Network Generalization](#intrinsic-properties-of-image-data-manifolds-and-their-effects-on-neural-network-generalization)
   - [Image Distribution Similarity Metrics and Generative Models](#image-distribution-similarity-metrics-and-generative-models)
   - [Vision Foundation Models for Segmentation and Beyond](#vision-foundation-models-for-segmentation-and-beyond)
   - [Neural Network Interpretability and Explainability](#neural-network-interpretability-and-explainability)
