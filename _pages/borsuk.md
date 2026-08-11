@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /borsuk/
-title: A 63-dimensional counterexample to Borsuk's conjecture
-description: A new, smaller counterexample to Borsuk's conjecture, found with Claude
+title: Claude Tackles Borsuk
+description: A 63-dimensional counterexample, found with Claude
 nav: true
 nav_order: 3
 ---
