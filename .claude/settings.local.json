@@ -20,7 +20,13 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Bash(curl -s \"https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css\")"
+      "Bash(curl -s \"https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css\")",
+      "Bash(gh api *)",
+      "Bash(python3 -c ' *)",
+      "WebFetch(domain:teorth.github.io)",
+      "Read(//Users/nickk124/files/research/unites/AImath/borsuk/**)",
+      "Bash(md5 /Users/nickk124/files/research/unites/AImath/borsuk/borsuk63.pdf /Users/nickk124/files/professional/personalwebsite/nickk124.github.io/assets/pdf/borsuk63.pdf)",
+      "Bash(pdftotext -layout \"/Users/nickk124/files/professional/personalwebsite/nickk124.github.io/assets/pdf/borsuk63.pdf\" -)"
     ],
     "deny": [],
     "ask": []
