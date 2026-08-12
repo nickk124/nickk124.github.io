@@ -6,4 +6,4 @@ related_posts: false
 category: preprint
 ---
 
-I asked Claude to try to work on unsolved problems in math, and it found a new counterexample to [Borsuk's conjecture](https://en.wikipedia.org/wiki/Borsuk%27s_conjecture): 321 points in $$\mathbb{R}^{63}$$ that can't be split into 64 pieces of smaller diameter, the smallest dimension yet, beating the 2014 record of dimension 64. Thusfar verified four ways; see the [full writeup](/borsuk/) for details.
+I asked Claude to work on unsolved problems in math. It independently found the same 63-dimensional counterexample to [Borsuk's conjecture](/borsuk/) that [Max Grinsztajn](https://github.com/maaxgrin) had already found with GPT-5.5 Pro two and a half months earlier, with the same construction, different derivation. See the [full writeup](/borsuk/) for attribution and what's actually seemingly new here (an independent exact certificate, plus why the method can't reach dimension 62).

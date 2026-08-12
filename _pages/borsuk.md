@@ -2,18 +2,22 @@
 layout: page
 permalink: /borsuk/
 title: Claude Tackles Borsuk
-description: Claude finds a 63-dimensional counterexample to Borsuk's Conjecture (1933)
+description: Claude independently rediscovers Grinsztajn's 63-dimensional counterexample to Borsuk's Conjecture (1933) — plus a new exact certificate and an obstruction at 62
 nav: true
 nav_order: 3
 ---
 
-In August 2026 I asked Claude to try to work on unsolved problems in mathematics. It found a new counterexample to [Borsuk's conjecture](https://en.wikipedia.org/wiki/Borsuk%27s_conjecture): 321 points in $$\mathbb{R}^{63}$$ that cannot be partitioned into 64 subsets of smaller diameter. This is the smallest dimension in which the conjecture is now known to fail, beating the previous record of dimension 64 ([Jenrich, 2014](https://arxiv.org/abs/1308.0206)), and closing a gap that had stood open for $$4 \le n \le 63$$.
+<div style="border-left: 4px solid #d9822b; background: rgba(217,130,43,0.08); padding: 0.9rem 1.1rem; border-radius: 4px; margin-bottom: 1.5rem;">
+<strong>Update, August 12, 2026:</strong> This exact counterexample — 321 points in $$\mathbb{R}^{63}$$ — was already found by <a href="https://github.com/maaxgrin/borsuk-63-counterexample">Max Grinsztajn, working with GPT-5.5 Pro, in May 2026</a>, about two and a half months before this page went up, and is recorded as the current record on <a href="https://teorth.github.io/optimizationproblems/constants/28a.html">Terence Tao's optimization-problems tracker</a>. Claude's construction, worked out in August 2026 with no knowledge of Grinsztajn's note, turns out to be the identical object point for point, including the scalar. <strong>Priority for the counterexample belongs to Grinsztajn.</strong> What's new here is an independent exact-arithmetic certificate, a uniformity statement (the construction works for all 4,809 known witness planes and extends to up to 325 points), and an analysis of why this approach stops at dimension 63 and can't reach 62 — see "Priority and independence" in the paper below for the full account.
+</div>
 
-This result has not been peer-reviewed or published yet. The paper below documents the full construction, and everything it depends on can be independently re-derived with the one-command verifier further down this page. I'd encourage you to run it rather than take Claude's word for it.
+In August 2026 I asked Claude to try to work on unsolved problems in mathematics. It produced a 321-point counterexample to [Borsuk's conjecture](https://en.wikipedia.org/wiki/Borsuk%27s_conjecture) in $$\mathbb{R}^{63}$$ — independently arriving at the same construction Max Grinsztajn had already published two and a half months earlier (see the notice above for attribution).
+
+This result has not been peer-reviewed or published. The paper below documents the full construction, and everything it depends on can be independently re-derived with the one-command verifier further down this page. I'd encourage you to run it rather than take Claude's word for it.
 
 ## Abstract
 
-> We exhibit a set of 321 points in $$\mathbb{R}^{63}$$ that cannot be partitioned into 64 subsets of smaller diameter, so Borsuk's conjecture fails in dimension 63. The previous smallest counterexample was in dimension 64 (Jenrich, 2014), and the conjecture was open for $$4 \le n \le 63$$. The construction adds a single point to the 320-point rank-63 subconfiguration of Bondarenko's two-distance set, whose counting bound has been stuck at exactly $$\lceil 320/5 \rceil = 64$$ parts. The added point is not a vertex of the underlying strongly regular graph, so the resulting set is a three-distance set; this is precisely why the example was not reachable inside the two-distance framework in which all previous work took place.
+> Borsuk's conjecture fails in dimension 63. This was established by Grinsztajn in May 2026, who exhibited a 321-point set in $$\mathbb{R}^{63}$$ every smaller-diameter subset of which has at most five points. The present note was produced independently in August 2026, in ignorance of that work, and arrives at the same construction: the 320-point rank-63 subconfiguration of Bondarenko's $$G_2(4)$$ two-distance set, whose counting bound ties at exactly $$\lceil 320/5 \rceil = 64$$ parts, together with one further point obtained by projecting a deleted vertex into the span and rescaling it by $$\mu = (-1+\sqrt{222})/13$$. The two constructions agree point for point, including the scalar, so we claim no priority for the counterexample. What we add is an independent exact certificate over $$\mathbb{Q}(\sqrt{222})$$, a uniformity statement (the construction works for every one of the 4,809 known witness planes, and admits up to 325 points), and a slack identity that explains why this method stops at 63 and what would have to be true for it to reach 62.
 
 <div style="margin: 1.5rem 0;">
   <a href="{{ '/assets/pdf/borsuk63.pdf' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Download PDF</a>
@@ -48,3 +52,5 @@ Files:
 - [`borsuk63_points.csv`]({{ '/assets/borsuk/borsuk63_points.csv' | relative_url }}) (same data, plain text)
 
 The paper also describes an exact-arithmetic certificate (over $$\mathbb{Q}$$ and $$\mathbb{Q}(\sqrt{222})$$) that re-establishes every load-bearing claim without floating point, cross-checked against an independent CP-SAT solve. That code will be linked here once its repository is public.
+
+Grinsztajn's independent verification — which rebuilds the same graph from $$PG(2,16)$$ over $$\mathbb{F}_{16}$$, confirms the strongly regular parameters and the 96/320 split by disjoint code, and exports DIMACS certificates with an independent Sage cross-check — is in [his repository](https://github.com/maaxgrin/borsuk-63-counterexample). Between the two, the same object is now checked from the graph side and the metric side.
