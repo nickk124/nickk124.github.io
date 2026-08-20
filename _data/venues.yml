@@ -23,6 +23,10 @@
   url: https://iopscience.iop.org/journal/0067-0049
   color: "#7b2fbe"
 
+"IJCARS":
+  url: https://link.springer.com/journal/11548
+  color: "#7b2fbe"
+
 # Conferences (blue)
 "ICLR":
   url: https://iclr.cc
