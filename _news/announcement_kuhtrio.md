@@ -6,4 +6,4 @@ related_posts: false
 category: award
 ---
 
-🎉 Selected as a Postdoctoral Trainee for the NIH-funded NC KUH (Kidney, Hematology, and Urology) TRIO U2C/TL1 Training Program!
+🎉 I'm honored to have been selected as a Postdoctoral Trainee for the NIH-funded NC KUH (Kidney, Hematology, and Urology) TRIO U2C/TL1 Training Program!
