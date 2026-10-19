@@ -84,7 +84,7 @@ Note: Automatic deployment is configured via GitHub Actions on pushes to master.
 - Site uses `master` branch for source and `gh-pages` for deployment
 - GitHub Actions handles automatic deployment on push to master
 - Base URL: https://nickk124.github.io
-- The site owner is configured as Nicholas (Nick) Konz with Duke University email
+- The site owner is configured as Nick (Nicholas) Konz with Duke University email
 - Google Scholar integration enabled
 - Social media profiles configured (GitHub, Twitter, LinkedIn)
 
